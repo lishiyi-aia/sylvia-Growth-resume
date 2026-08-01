@@ -24,15 +24,15 @@ type Lang = 'en' | 'zh'
 
 const COPY = {
   en: {
-    title: 'About Sen',
+    title: 'About Sylvia',
     paragraphs: [
-      "I'm Sen — a creative technologist living where code meets art. I spend my days around coding, creativity, playful interaction & design, and CG work. I love studying and combining skills across different fields — to create, and to explore more possibilities.",
+      "I'm Sylvia, a Master's student in Marketing at the University of Sydney with experience in AI product operations, user research, and content growth. I'm passionate about connecting user insights, product experience, and creative strategy.",
     ],
   },
   zh: {
-    title: 'About Sen',
+    title: 'About Sylvia',
     paragraphs: [
-      '我是 Sen——一个游走在代码与艺术之间的创意技术人。我常年和 Coding、创意、有趣的交互 & 设计、CG 创作等打交道，喜欢研究并组合不同领域的技能，来创造并探索更多可能性。',
+      '我是 Sylvia，目前在悉尼大学攻读市场营销硕士，拥有 AI 产品运营、用户研究与内容增长经验。我关注用户需求、产品体验与增长策略，希望通过数据洞察和创意内容创造更好的用户体验。',
     ],
   },
 }
@@ -170,12 +170,12 @@ export default function App() {
         <span className="hero-mark bl">+</span>
         <span className="hero-mark br">+</span>
         <div className="hero-meta hm-tl">
-          <span className="hm-name">Sen Zheng 郑越升</span>
-          <span>Creative Technologist</span>
+          <span className="hm-name">Shiyi Li 李世怡</span>
+          <span>MARKETING · PRODUCT OPERATIONS</span>
         </div>
         <div className="hero-meta hm-tr">Portfolio — 2026</div>
-        <div className="hero-meta hm-bl">Code · Art · Play</div>
-        <div className="hero-meta hm-right">Based in Shenzhen</div>
+        <div className="hero-meta hm-bl">Marketing · AI · Growth</div>
+        <div className="hero-meta hm-right">Based in Shanghai</div>
       </motion.div>
 
       {/* 全屏胶片噪点蒙层（multiply 混合） */}

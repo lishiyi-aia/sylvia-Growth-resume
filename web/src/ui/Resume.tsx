@@ -1,92 +1,64 @@
 import { motion } from 'framer-motion'
-import { ZooopLogo } from './ZooopLogo'
-import { SOCIAL_ICONS } from './SocialIcons'
 import { FOCUS_POINTS } from '../data/focusPoints'
 
-const SOCIAL_LINKS = [
-  {
-    id: 'douyin',
-    label: '抖音',
-    href: 'https://www.douyin.com/user/MS4wLjABAAAAlmQDgHf0NlbsjrfWENm8LyrIikxSRRq7mzlzQSIStQJkV7Ju52B6A55zw5TUDU5d',
-  },
-  {
-    id: 'bilibili',
-    label: 'B站',
-    href: 'https://space.bilibili.com/275344092?spm_id_from=333.937.0.0',
-  },
-  {
-    id: 'xiaohongshu',
-    label: '小红书',
-    href: 'https://www.xiaohongshu.com/user/profile/5ceba8c8000000000502fd69',
-  },
-]
-
 // 履历数据（双语）。英文为译稿，可按需润色。
-interface ResumeGroup {
-  heading?: string
-  logo?: string
-  logoImg?: string
-  sub?: string
-  link?: string
-  items?: string[]
-  links?: { id: string; label: string; href: string }[]
-}
 interface ResumeEntry {
   period: string
   place: string
   role?: string
-  logo?: { src: string; alt: string }
   points?: string[]
-  groups?: ResumeGroup[]
 }
 const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
   en: {
     title: 'Résumé',
     entries: [
       {
-        period: '2013 – 2017',
-        place: 'Sun Yat-sen University',
-        role: 'B.S. in Software Engineering',
-      },
-      {
-        period: '2017 – 2020',
-        place: 'HOTSAR Studio · Shanghai',
-        role: 'Co-founder',
-        logo: { src: `${import.meta.env.BASE_URL}images/hotsar.jpg`, alt: 'HOTSAR' },
+        period: '2021.09–2024.10',
+        place: 'National University of Malaysia (UKM)',
+        role: 'Bachelor of Business Administration',
         points: [
-          'Co-founder · team of 20+',
-          'Clients: Alibaba brands, Tencent, NetEase, DiDi, China Resources, McDonald’s…',
-          'Work: development / creative direction / animation / team management',
+          'Relevant coursework in Marketing Management, Business Statistics, Organizational Behaviour, International Business, Business Communication, and Operations Management.',
         ],
       },
       {
-        period: '2020 – 2025',
-        place: 'Bad Printer Studio · Shenzhen',
-        role: 'Founder',
-        logo: { src: `${import.meta.env.BASE_URL}images/bp.png`, alt: 'Bad Printer Studio' },
+        period: '2023.12–2024.06',
+        place: 'ZUS Coffee · Malaysia',
+        role: 'New Media Operations Intern',
         points: [
-          'Founder · team of 14',
-          'Clients: Honor of Kings / Trip.com / ByteDance / Kuaishou / VIVO / Tecno / Xiaomi / IM Motors…',
-          'Work: team management / creative direction / animation / development',
+          'Researched new product content and distilled messaging from user preferences, social feedback, and competitor performance.',
+          'Produced 50 Instagram posts, handling planning, shooting, editing, English copywriting, and publishing.',
+          'Delivered 15+ content reviews, shifting strategy toward product features, consumption scenarios, and lifestyle, gaining over 11k followers.',
         ],
       },
       {
-        period: '2025 – Now',
-        place: 'Content Creator',
-        groups: [
-          {
-            heading: '小郑还挺忙',
-            logoImg: `${import.meta.env.BASE_URL}images/buzyzheng.png`,
-            sub: 'tech-DIY creator',
-            items: ['120K on Douyin · 87K on Bilibili · 23K on Xiaohongshu'],
-            links: SOCIAL_LINKS,
-          },
+        period: '2024.10–2025.05',
+        place: 'Xuanhua Intelligence · Beijing',
+        role: 'AI Product Operations Intern',
+        points: [
+          'Analyzed higher-education user needs, collating 100+ feedback items and identifying frequent requirements and experience issues.',
+          'Mapped product journey drop-off points and proposed optimizations based on data insights.',
+          'Produced 30+ guides, FAQs, and tutorials, driving a 30% increase in core feature adoption.',
+          'Supported B2B university pilots with 10+ recommendations and prepared demos and instructor case materials.',
         ],
       },
       {
-        period: '2026 – Now',
-        place: 'Indie Developer',
-        groups: [{ logo: 'zooop', sub: 'AI creation platform', link: 'https://zooop.ai/' }],
+        period: '2025.08–Present (Expected Feb 2027)',
+        place: 'The University of Sydney',
+        role: 'Master of Marketing',
+        points: [
+          'Relevant coursework in Marketing Analytics, Consumer Behaviour, Marketing Research, Customer Analytics and CRM, B2B Marketing, and New Product Marketing.',
+        ],
+      },
+      {
+        period: '2025.12–2026.02',
+        place: 'Beijing Sohu New Media',
+        role: 'AI Product Operations Intern',
+        points: [
+          'Researched AI news-tracking products and supported PRD, feature specs, and FAQ development using user feedback and data.',
+          'Built AI-assisted operations dashboards to identify drop-off points and product improvement opportunities.',
+          'Created 100+ WeChat, Xiaohongshu, and community posts and optimized channel strategy through A/B testing.',
+          'Helped increase new registrations by 50% and raise special-topic creation rate by 15%.',
+        ],
       },
     ],
   },
@@ -94,49 +66,52 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     title: 'Résumé',
     entries: [
       {
-        period: '2013 – 2017',
-        place: '中山大学',
-        role: '软件工程 · 本科',
-      },
-      {
-        period: '2017 – 2020',
-        place: 'HOTSAR 工作室 · 上海',
-        role: '联合创始人',
-        logo: { src: `${import.meta.env.BASE_URL}images/hotsar.jpg`, alt: 'HOTSAR' },
+        period: '2021.09–2024.10',
+        place: '马来西亚国立大学（UKM）',
+        role: '工商管理学士',
         points: [
-          '联合创始人，团队人数 20+',
-          '服务客户：阿里系品牌、腾讯、网易、滴滴、华润、麦当劳…',
-          '负责：技术开发 / 创意策划 / 动画制作 / 团队管理',
+          '主修营销管理、商业统计、组织行为、国际商务、商务沟通与运营管理。',
         ],
       },
       {
-        period: '2020 – 2025',
-        place: '坏打印机工作室 · 深圳',
-        role: '创始人',
-        logo: { src: `${import.meta.env.BASE_URL}images/bp.png`, alt: '坏打印机工作室' },
+        period: '2023.12–2024.06',
+        place: 'ZUS Coffee · 马来西亚',
+        role: '新媒体运营实习生',
         points: [
-          '创始人，团队人数 14',
-          '服务客户：王者荣耀 / 携程 / 字节 / 快手 / VIVO / 传音 / 小米…',
-          '负责：团队管理 / 创意策划 / 动画制作 / 技术开发',
+          '参与新品内容调研，结合用户偏好、社媒反馈与竞品表现提炼传播卖点。',
+          '完成50条Instagram内容的选题、拍摄、剪辑、英文文案与发布。',
+          '输出15次以上内容复盘，推动内容转向“产品功能＋消费场景＋生活方式”，账号粉丝增长1.1万以上。',
         ],
       },
       {
-        period: '2025 – 至今',
-        place: '自媒体博主',
-        groups: [
-          {
-            heading: '小郑还挺忙',
-            logoImg: `${import.meta.env.BASE_URL}images/buzyzheng.png`,
-            sub: '科技 DIY 博主',
-            items: ['抖音 12 万 · B站 8.7 万 · 小红书 2.3 万 关注'],
-            links: SOCIAL_LINKS,
-          },
+        period: '2024.10–2025.05',
+        place: '玄华智能（北京）科技有限公司',
+        role: 'AI产品运营实习生',
+        points: [
+          '分析高校用户需求，整理100余条用户反馈并识别高频需求和体验问题。',
+          '分析产品体验路径中的流失节点，结合数据提出产品优化建议。',
+          '输出30余篇使用指南、FAQ和功能教程，推动核心功能使用率提升30%。',
+          '支持B2B高校试点，输出10余项优化建议并整理产品演示与教师案例材料。',
         ],
       },
       {
-        period: '2026 – 至今',
-        place: '独立开发',
-        groups: [{ logo: 'zooop', sub: 'AI 创作平台', link: 'https://zooop.ai/' }],
+        period: '2025.08–至今（预计2027.02毕业）',
+        place: '悉尼大学',
+        role: '市场营销硕士',
+        points: [
+          '主修营销分析、消费者行为、市场研究、客户分析与CRM、B2B营销及新产品营销。',
+        ],
+      },
+      {
+        period: '2025.12–2026.02',
+        place: '北京搜狐新媒体信息有限公司',
+        role: 'AI产品运营实习生',
+        points: [
+          '参与AI资讯追踪产品调研，结合用户反馈与数据协助撰写PRD、功能说明和FAQ。',
+          '运用AI辅助搭建运营分析看板，识别用户路径中的流失节点和产品优化问题。',
+          '输出100余篇公众号、小红书及社群内容，并通过A/B Test优化渠道策略。',
+          '推动新增注册用户数提升50%，专题创建率提升15%。',
+        ],
       },
     ],
   },
@@ -154,68 +129,6 @@ const containerV = {
 const itemV = {
   hidden: { opacity: 0, y: 26 },
   show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE } },
-}
-
-function Group({ group }: { group: ResumeGroup }) {
-  const heading =
-    group.logo === 'zooop' ? (
-      <a
-        className="zooop-logo-link"
-        href={group.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="ZOOOP"
-      >
-        <ZooopLogo className="zooop-logo" animated />
-      </a>
-    ) : group.link ? (
-      <a className="about-link" href={group.link} target="_blank" rel="noopener noreferrer">
-        {group.heading}
-      </a>
-    ) : (
-      <span>{group.heading}</span>
-    )
-
-  return (
-    <motion.div className="tl-group" variants={itemV}>
-      <div className="tl-group-head">
-        {group.logoImg && (
-          <span className="tl-group-logo">
-            <img src={group.logoImg} alt={group.heading || ''} loading="lazy" />
-          </span>
-        )}
-        {heading}
-        {group.sub && <span className="tl-group-sub">{group.sub}</span>}
-      </div>
-      {group.items && (
-        <ul className="tl-points">
-          {group.items.map((it, i) => (
-            <li key={i}>{it}</li>
-          ))}
-        </ul>
-      )}
-      {group.links && (
-        <div className="tl-logos">
-          {group.links.map((l) => {
-            const Icon = SOCIAL_ICONS[l.id as keyof typeof SOCIAL_ICONS]
-            return (
-              <a
-                key={l.id}
-                className="tl-logo"
-                href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={l.label}
-                title={l.label}
-              >
-                <Icon />
-              </a>
-            )
-          })}
-        </div>
-      )}
-    </motion.div>
-  )
 }
 
 function Entry({ entry, index }: { entry: ResumeEntry; index: number }) {
@@ -238,11 +151,6 @@ function Entry({ entry, index }: { entry: ResumeEntry; index: number }) {
           {entry.period}
         </motion.div>
         <motion.div className="tl-head" variants={itemV}>
-          {entry.logo && (
-            <span className="tl-logo-chip">
-              <img src={entry.logo.src} alt={entry.logo.alt} loading="lazy" />
-            </span>
-          )}
           <h3 className="tl-place">{entry.place}</h3>
         </motion.div>
         {entry.role && (
@@ -257,7 +165,6 @@ function Entry({ entry, index }: { entry: ResumeEntry; index: number }) {
             ))}
           </motion.ul>
         )}
-        {entry.groups && entry.groups.map((g, i) => <Group key={i} group={g} />)}
       </div>
     </motion.div>
   )

@@ -53,7 +53,7 @@ export interface WorksLang {
 
 export const WORKS: Record<'zh' | 'en', WorksLang> = {
   zh: {
-    title: 'Works',
+    title: '新品运营项目',
     closeLabel: '返回',
     openLabel: '展开作品',
     hint: '继续下滑',
@@ -65,71 +65,63 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     countLabel: (n) => `${n} 件作品`,
     sections: [
       {
-        id: 'ad',
+        id: 'project-1',
         no: '01',
-        title: '广告项目',
-        tagline: '坏打印机工作室',
+        title: 'AI资讯追踪App运营分析与问题归因面板',
+        tagline: '新品运营｜多源数据整合｜用户路径诊断｜运营决策',
         items: [
-          { name: '谁在弹古琴', meta: '互动项目', slug: 'guqin' },
-          { name: '新加坡联合早报 · 校园时光机', meta: '互动项目', slug: 'time-machine' },
-          { name: '动画合集', meta: '动画', slug: 'animation-collection' },
-          { name: '其他作品', slug: 'other-works' },
+          {
+            name: 'AI资讯追踪App运营分析与问题归因面板',
+            meta: 'AI Information Tracking App Operations Dashboard',
+            tags: [
+              '整合用户路径、行为埋点、问卷反馈与核心指标日报',
+              'Funnel、Activation、Segments与Cross Analysis',
+              '数据质量检查、敏感信息保护与问题归因',
+              '从用户流失节点定位到产品运营优化建议',
+            ],
+          },
         ],
-        awards: ['虎啸奖', 'FWA', 'Awwwards'],
       },
       {
-        id: 'maker',
+        id: 'project-2',
         no: '02',
-        title: '自媒体',
-        tagline: '23 万关注 ｜ 年更博主',
+        title: '海内外生成式AI教育产品试点',
+        tagline: '新品落地｜中国内地高校 × 东南亚教育机构',
         items: [
           {
-            name: '我把工作室的玻璃墙改造成了游戏机',
-            meta: '1700 万 播放',
-            tags: ['B站每周必看', 'B站热搜'],
-            slug: 'glass-wall-arcade',
+            name: '海内外生成式AI教育产品试点',
+            meta: 'Generative AI Education Product Pilots',
+            tags: [
+              '境内外教育市场、教学场景与用户需求研究',
+              '产品Demo、教师案例、课程方案与应用场景设计',
+              '用户试用、功能教学、使用指南与FAQ体系',
+              'B2B合作支持、用户反馈分析与产品优化闭环',
+            ],
           },
-          {
-            name: '我把代码写入狗狗的衣服里',
-            meta: '900 万 播放',
-            tags: ['微博 / 抖音 / B站 三平台热搜榜'],
-            slug: 'dog-code-clothes',
-          },
-          {
-            name: '我把 Switch 放大十倍，做成了智能猫窝',
-            meta: '500 万 播放',
-            tags: ['B站每周必看'],
-            slug: 'switch-cat-house',
-          },
-          { name: '我们在80年代的红白机游戏里结婚啦！！', slug: 'retro-game-wedding' },
         ],
-        footer: '3D 建模 · 3D 打印 · PCB 设计 · 嵌入式开发 · 软件开发 · 动画包装',
       },
       {
-        id: 'product',
+        id: 'project-3',
         no: '03',
-        title: '产品',
-        tagline: 'ZOOOP',
+        title: 'ZUS Everywhere新品账号运营',
+        tagline: '新品传播｜Instagram内容策略｜增长复盘',
         items: [
-          { name: 'ZOOOP', meta: 'AI 原生创作平台', link: 'https://zooop.ai/', slug: 'zooop' },
-        ],
-      },
-      {
-        id: 'graphics',
-        no: '04',
-        title: '个人业余作品',
-        tagline: 'Raymarching · WebGL · Blender',
-        items: [
-          { name: 'Raymarching', slug: 'raymarching' },
-          { name: 'WebGL', slug: 'webgl' },
-          { name: 'Blender', slug: 'blender' },
-          { name: '其他业余作品', slug: 'other-side-works' },
+          {
+            name: 'ZUS Everywhere新品账号运营',
+            meta: 'ZUS Everywhere New Product Social Operations',
+            tags: [
+              '新品内容调研、用户偏好分析与社媒卖点提炼',
+              '完成50条Instagram内容的策划、拍摄、剪辑与英文文案',
+              '测试产品功能、消费场景与生活方式等内容方向',
+              '输出15次以上内容复盘，推动账号粉丝增长1.1万以上',
+            ],
+          },
         ],
       },
     ],
   },
   en: {
-    title: 'Works',
+    title: 'New Product Operations',
     closeLabel: 'Back',
     openLabel: 'Explore',
     hint: 'Keep scrolling',
@@ -141,65 +133,57 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     countLabel: (n) => `${n} works`,
     sections: [
       {
-        id: 'ad',
+        id: 'project-1',
         no: '01',
-        title: 'Advertising',
-        tagline: 'HOTSAR · Bad Printer',
+        title: 'AI Information Tracking App Operations Dashboard',
+        tagline: 'New Product Operations · Multi-source Data · User Journey · Decision Support',
         items: [
-          { name: 'Who’s Talking About Guqin', meta: 'Interactive', slug: 'guqin' },
-          { name: 'Lianhe Zaobao · Campus Time Machine', meta: 'Interactive', slug: 'time-machine' },
-          { name: 'Animation Reel', meta: 'Animation', slug: 'animation-collection' },
-          { name: 'Other works', slug: 'other-works' },
+          {
+            name: 'AI Information Tracking App Operations Dashboard',
+            meta: 'AI资讯追踪App运营分析与问题归因面板',
+            tags: [
+              'Integrated user journey, event tracking, survey feedback, and KPI reporting',
+              'Funnel, activation, segmentation, and cross-analysis',
+              'Data quality checks, sensitive information protection, and issue attribution',
+              'From churn point diagnosis to product and operations optimization suggestions',
+            ],
+          },
         ],
-        awards: ['Tiger Roar', 'FWA', 'Awwwards'],
       },
       {
-        id: 'maker',
+        id: 'project-2',
         no: '02',
-        title: 'Content Creator',
-        tagline: '230K followers',
+        title: 'Generative AI Education Product Pilots',
+        tagline: 'Product Launch · Universities in China · Education Partners in Southeast Asia',
         items: [
           {
-            name: '“I Turned the Studio’s Glass Wall into a Game Console”',
-            meta: '17M views',
-            tags: ['Bilibili Weekly Picks', 'Bilibili Trending'],
-            slug: 'glass-wall-arcade',
+            name: 'Generative AI Education Product Pilots',
+            meta: '海内外生成式AI教育产品试点',
+            tags: [
+              'Research on education markets, teaching scenarios, and user needs',
+              'Product demos, teacher cases, course plans, and scenario design',
+              'User trials, feature teaching, usage guides, and FAQ systems',
+              'B2B support, user feedback analysis, and product optimization loops',
+            ],
           },
-          {
-            name: '“I Wrote Code into My Dog’s Clothes”',
-            meta: '9M views',
-            tags: ['Trending on Weibo / Douyin / Bilibili'],
-            slug: 'dog-code-clothes',
-          },
-          {
-            name: '“I Made a 10× Switch into a Smart Cat House”',
-            meta: '5M views',
-            tags: ['Bilibili Weekly Picks'],
-            slug: 'switch-cat-house',
-          },
-          { name: '“We Got Married in an 80s Famicom Game!!”', slug: 'retro-game-wedding' },
         ],
-        footer: 'Tech: 3D modeling · 3D printing · PCB design · embedded · software · motion graphics',
       },
       {
-        id: 'product',
+        id: 'project-3',
         no: '03',
-        title: 'Products',
-        tagline: 'ZOOOP',
+        title: 'ZUS Everywhere New Product Social Operations',
+        tagline: 'Product Launch · Instagram Strategy · Growth Review',
         items: [
-          { name: 'ZOOOP', meta: 'AI-native creation platform', link: 'https://zooop.ai/', slug: 'zooop' },
-        ],
-      },
-      {
-        id: 'graphics',
-        no: '04',
-        title: 'Side Projects',
-        tagline: 'Raymarching · WebGL · Blender',
-        items: [
-          { name: 'Raymarching', slug: 'raymarching' },
-          { name: 'WebGL', slug: 'webgl' },
-          { name: 'Blender', slug: 'blender' },
-          { name: 'Other side projects', slug: 'other-side-works' },
+          {
+            name: 'ZUS Everywhere New Product Social Operations',
+            meta: 'ZUS Everywhere新品账号运营',
+            tags: [
+              'Research on product content, user preferences, and social media positioning',
+              'Planned, shot, edited, and wrote English copy for 50 Instagram posts',
+              'Tested product features, consumption scenarios, and lifestyle content directions',
+              'Delivered 15+ content reviews and drove over 11,000 new followers',
+            ],
+          },
         ],
       },
     ],
@@ -209,10 +193,9 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
 // 板块配图（横向画廊每张卡片左侧的整高封面）。放到 public/works/covers/ 下。
 // 缺图时左栏用大编号渐变占位，放入图片后自动点亮。
 export const SECTION_COVERS: Record<string, string> = {
-  ad: `${import.meta.env.BASE_URL}works/covers/ad.jpg`,
-  maker: `${import.meta.env.BASE_URL}works/covers/maker.jpg`,
-  product: `${import.meta.env.BASE_URL}works/covers/product.jpg`,
-  graphics: `${import.meta.env.BASE_URL}works/covers/graphics.jpg`,
+  'project-1': '/works/covers/sohu-dashboard.png',
+  'project-2': '/works/covers/education-pilot.png',
+  'project-3': '/works/covers/zus-everywhere.jpg',
 }
 
 // 统计一个板块的作品数（items 或 groups 求和），用于索引行 hover 显示

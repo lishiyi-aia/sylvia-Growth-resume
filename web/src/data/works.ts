@@ -192,10 +192,12 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
 
 // 板块配图（横向画廊每张卡片左侧的整高封面）。放到 public/works/covers/ 下。
 // 缺图时左栏用大编号渐变占位，放入图片后自动点亮。
+const base = import.meta.env.BASE_URL
+
 export const SECTION_COVERS: Record<string, string> = {
-  'project-1': `${import.meta.env.BASE_URL}works/covers/sohu-dashboard.png`,
-  'project-2': `${import.meta.env.BASE_URL}works/covers/education-pilot.png`,
-  'project-3': `${import.meta.env.BASE_URL}works/covers/zus-everywhere.jpg`,
+  'project-1': `${base}works/covers/sohu-dashboard.png`,
+  'project-2': `${base}works/covers/education-pilot.png`,
+  'project-3': `${base}works/covers/zus-everywhere.jpg`,
 }
 
 // 统计一个板块的作品数（items 或 groups 求和），用于索引行 hover 显示

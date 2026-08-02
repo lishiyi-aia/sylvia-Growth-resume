@@ -10,11 +10,11 @@ interface ResumeEntry {
 }
 const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
   en: {
-    title: 'Résumé',
+    title: 'Resume 简历',
     entries: [
       {
         period: '2021.09–2024.10',
-        place: 'National University of Malaysia (UKM)',
+        place: 'Universiti Kebangsaan Malaysia（UKM｜QS 130）',
         role: 'Bachelor of Business Administration',
         points: [
           'Relevant coursework in Marketing Management, Business Statistics, Organizational Behaviour, International Business, Business Communication, and Operations Management.',
@@ -43,7 +43,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
       },
       {
         period: '2025.08–Present (Expected Feb 2027)',
-        place: 'The University of Sydney',
+        place: 'University of Sydney（USYD｜QS 28）',
         role: 'Master of Marketing',
         points: [
           'Relevant coursework in Marketing Analytics, Consumer Behaviour, Marketing Research, Customer Analytics and CRM, B2B Marketing, and New Product Marketing.',
@@ -63,11 +63,11 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     ],
   },
   zh: {
-    title: 'Résumé',
+    title: 'Resume 简历',
     entries: [
       {
         period: '2021.09–2024.10',
-        place: '马来西亚国立大学（UKM）',
+        place: '马来西亚国立大学（UKM｜QS 130）',
         role: '工商管理学士',
         points: [
           '主修营销管理、商业统计、组织行为、国际商务、商务沟通与运营管理。',
@@ -96,7 +96,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
       },
       {
         period: '2025.08–至今（预计2027.02毕业）',
-        place: '悉尼大学',
+        place: '悉尼大学（USYD｜QS 28）',
         role: '市场营销硕士',
         points: [
           '主修营销分析、消费者行为、市场研究、客户分析与CRM、B2B营销及新产品营销。',

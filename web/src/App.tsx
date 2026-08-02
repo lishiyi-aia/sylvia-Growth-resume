@@ -24,15 +24,15 @@ type Lang = 'en' | 'zh'
 
 const COPY = {
   en: {
-    title: 'About Sylvia',
+    title: 'About Shiyi',
     paragraphs: [
-      "I'm Sylvia, a Master's student in Marketing at the University of Sydney with experience in AI product operations, user research, and content growth. I'm passionate about connecting user insights, product experience, and creative strategy.",
+      "I'm Shiyi, a Master's student in Marketing at the University of Sydney with experience in AI product operations, user research, and content growth. I'm passionate about connecting user insights, product experience, and creative strategy.",
     ],
   },
   zh: {
-    title: 'About Sylvia',
+    title: 'About Shiyi',
     paragraphs: [
-      '我是 Sylvia，目前在悉尼大学攻读市场营销硕士，拥有 AI 产品运营、用户研究与内容增长经验。我关注用户需求、产品体验与增长策略，希望通过数据洞察和创意内容创造更好的用户体验。',
+      '我是李世怡，目前在悉尼大学攻读市场营销硕士，拥有 AI 产品运营、用户研究与内容增长经验。我关注用户需求、产品体验与增长策略，希望通过数据洞察和创意内容创造更好的用户体验。',
     ],
   },
 }
@@ -173,7 +173,7 @@ export default function App() {
           <span className="hm-name">Shiyi Li 李世怡</span>
           <span>MARKETING · PRODUCT OPERATIONS</span>
         </div>
-        <div className="hero-meta hm-tr">Portfolio — 2026</div>
+        <div className="hero-meta hm-tr">2026</div>
         <div className="hero-meta hm-bl">Marketing · AI · Growth</div>
         <div className="hero-meta hm-right">Based in Shanghai</div>
       </motion.div>

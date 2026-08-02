@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  // 打包后资源用相对路径（dist/index.html 引用 ./assets/...，可放任意子目录/直接打开）
-  base: './',
+  // GitHub Pages 部署时使用仓库子路径，确保静态资源可正确加载
+  base: '/sen-3d-resume/',
   plugins: [react()],
   server: { host: true, port: 5173 },
 })

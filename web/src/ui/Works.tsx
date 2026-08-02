@@ -66,7 +66,13 @@ function SectionCard({
       </div>
       <div className="wk-card-cover">
         {cover && !coverError ? (
-          <img src={cover} alt="" onError={() => setCoverError(true)} />
+          <img
+            src={cover}
+            alt={section.title}
+            onError={() => setCoverError(true)}
+            onLoad={() => setCoverError(false)}
+            style={{ objectFit: 'cover' }}
+          />
         ) : (
           <div className="wk-card-cover-ph" aria-hidden="true">
             <span className="wk-card-cover-no">{section.no}</span>

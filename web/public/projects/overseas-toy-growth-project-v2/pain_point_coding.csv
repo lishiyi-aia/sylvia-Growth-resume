@@ -1,0 +1,7 @@
+theme,cn,stage,mentions,severity,sourceIds,userQuestion,response,color
+Authenticity / fake risk,真假鉴定与假货风险,Evaluate,8,5,"S04,S08,S11,S12,S17,S18",这个是不是正品？买到假的怎么办？,在发布前加入 QR/hologram/UV check 上传；详情页展示认证状态；内容侧做真假对比短视频。,#E94F37
+Payment / transaction trust,支付与交易信任,Purchase,7,5,"S03,S04,S06,S07,S10,S12",钱打过去后，对方不发货怎么办？,托管支付、交易保护文案前置、争议入口可见；Reddit 内容避免硬广，先讲安全交易流程。,#F59E0B
+Seller credibility,卖家可信度,Evaluate,6,4,"S03,S04,S06,S10,S12",这个卖家可靠吗？评价是不是刷的？,卖家等级、历史成交、发货时效、退货争议率和社区身份绑定。,#8B5CF6
+Price transparency,价格与溢价透明,Compare,5,4,"S01,S02,S05,S07,S13,S18",现在这个价格是不是被炒高了？,展示近期成交区间、官方零售价、同款在售分布；短视频解释价格波动。,#0EA5E9
+Drop / restock anxiety,补货与抢购焦虑,Discover,5,3,"S09,S10,S13",什么时候补货？错过是不是只能高价买？,做 stock alert、drop calendar、愿望单召回；TikTok 做补货/开箱内容。,#10B981
+Community identity,收藏展示与社群身份,Retain,4,3,"S09,S10,S14,S16",我想晒收藏，也想找同好交流。,搭建 collection wall、OOTD/haul 话题、Discord 身份组；用 UGC 带动留存。,#EC4899

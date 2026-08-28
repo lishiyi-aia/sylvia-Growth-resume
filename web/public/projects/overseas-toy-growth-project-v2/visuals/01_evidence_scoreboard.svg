@@ -1,0 +1,31 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="330" viewBox="0 0 1120 330">
+  <rect width="1120" height="330" fill="#f8fafc"/>
+  <text x="38" y="42" font-size="26" font-weight="800" fill="#0f172a">Evidence board: demand is hot, but trust risk is visible</text>
+  <text x="38" y="292" font-size="13" fill="#64748b">Source-coded public evidence. Exact dynamic platform numbers should be refreshed before final submission.</text>
+  
+      <rect x="38" y="78" width="248" height="184" rx="8" fill="#fff" stroke="#d7dde8"/>
+      <rect x="38" y="78" width="248" height="12" rx="6" fill="#EC4899"/>
+      <text x="58" y="128" font-size="18" font-weight="700" fill="#334155">POP MART</text>
+      <text x="58" y="180" font-size="36" font-weight="800" fill="#EC4899">RMB 17.17bn</text>
+      <text x="58" y="220" font-size="15" fill="#475569">H1 2026 revenue, +23.8% YoY</text>
+    
+      <rect x="310" y="78" width="248" height="184" rx="8" fill="#fff" stroke="#d7dde8"/>
+      <rect x="310" y="78" width="248" height="12" rx="6" fill="#8B5CF6"/>
+      <text x="330" y="128" font-size="18" font-weight="700" fill="#334155">Whatnot</text>
+      <text x="330" y="180" font-size="36" font-weight="800" fill="#8B5CF6">$8bn</text>
+      <text x="330" y="220" font-size="15" fill="#475569">2025 live sales by sellers</text>
+    
+      <rect x="582" y="78" width="248" height="184" rx="8" fill="#fff" stroke="#d7dde8"/>
+      <rect x="582" y="78" width="248" height="12" rx="6" fill="#F97316"/>
+      <text x="602" y="128" font-size="18" font-weight="700" fill="#334155">Reddit</text>
+      <text x="602" y="180" font-size="36" font-weight="800" fill="#F97316">190k + 43k</text>
+      <text x="602" y="220" font-size="15" fill="#475569">r/labubu + r/LabubuDrops members</text>
+    
+      <rect x="854" y="78" width="248" height="184" rx="8" fill="#fff" stroke="#d7dde8"/>
+      <rect x="854" y="78" width="248" height="12" rx="6" fill="#E94F37"/>
+      <text x="874" y="128" font-size="18" font-weight="700" fill="#334155">Risk</text>
+      <text x="874" y="180" font-size="36" font-weight="800" fill="#E94F37">227</text>
+      <text x="874" y="220" font-size="15" fill="#475569">BBB Labubu scam search results</text>
+    
+</svg>

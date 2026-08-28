@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sylvia Growth Operations Case Study</title>
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #d7dde8;
+      --soft: #f8fafc;
+      --teal: #14b8a6;
+      --pink: #ec4899;
+      --orange: #f97316;
+      --blue: #0ea5e9;
+      --violet: #8b5cf6;
+      --red: #e94f37;
+      --green: #10b981;
+      --amber: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.62;
+    }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 34px 26px 70px; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+      gap: 18px;
+    }
+    .label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    h1 {
+      font-size: 54px;
+      line-height: 1.05;
+      margin: 28px 0 18px;
+      letter-spacing: 0;
+      max-width: 980px;
+    }
+    h2 {
+      font-size: 28px;
+      margin: 58px 0 16px;
+      letter-spacing: 0;
+    }
+    h3 { margin: 0 0 10px; font-size: 18px; }
+    .lead {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 920px;
+      margin-bottom: 22px;
+    }
+    .thesis {
+      border-left: 8px solid var(--teal);
+      background: #f0fdfa;
+      padding: 20px 24px;
+      border-radius: 8px;
+      font-size: 19px;
+      font-weight: 750;
+      margin: 24px 0 26px;
+    }
+    .grid { display: grid; gap: 18px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card, .mini-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 18px;
+    }
+    .card strong { color: var(--ink); }
+    .card p, .mini-card p { margin: 6px 0; color: var(--muted); }
+    .metric {
+      border-top: 8px solid var(--teal);
+      min-height: 154px;
+    }
+    .metric:nth-child(2) { border-color: var(--violet); }
+    .metric:nth-child(3) { border-color: var(--orange); }
+    .metric .big {
+      display: block;
+      font-size: 31px;
+      font-weight: 850;
+      margin: 12px 0 4px;
+    }
+    .visual {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      margin: 18px 0 28px;
+    }
+    .visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .model-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .model-strip div {
+      color: #fff;
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 96px;
+      font-weight: 800;
+    }
+    .model-strip span { display: block; font-size: 13px; font-weight: 600; opacity: 0.95; margin-top: 8px; }
+    .pain-list { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .pain-row {
+      display: grid;
+      grid-template-columns: 18px 1fr 56px;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .pain-row:last-child { border-bottom: 0; }
+    .pain-dot { width: 14px; height: 14px; border-radius: 50%; }
+    .pain-row span { display: block; color: var(--muted); font-size: 14px; }
+    .score { font-weight: 850; color: var(--red); text-align: right; }
+    .mini-top { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+    .swatch { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { border-bottom: 1px solid var(--line); padding: 10px 8px; text-align: left; vertical-align: top; }
+    th { background: var(--soft); font-weight: 850; }
+    .note {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      padding: 16px 18px;
+      color: #9a3412;
+      font-weight: 750;
+    }
+    .two-column {
+      columns: 2;
+      column-gap: 32px;
+    }
+    .footer {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 860px) {
+      .grid.cols-3, .grid.cols-2, .model-strip { grid-template-columns: 1fr; }
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .two-column { columns: 1; }
+      h1 { font-size: 34px; }
+    }
+
+    /* Dark visual system aligned with the 3D resume site. */
+    :root {
+      --ink: #f6efe5;
+      --muted: rgba(246, 239, 229, 0.58);
+      --line: rgba(246, 239, 229, 0.16);
+      --soft: rgba(255, 255, 255, 0.06);
+      --teal: #d7b175;
+      --pink: #e67aa9;
+      --orange: #eaa45f;
+      --blue: #73a9ff;
+      --violet: #a48cff;
+      --red: #f1765f;
+      --green: #7dd6a7;
+      --amber: #f1c96f;
+      --deep: #07080c;
+      --panel: rgba(14, 17, 24, 0.76);
+      --panel-strong: rgba(20, 24, 32, 0.92);
+    }
+
+    html {
+      background: var(--deep);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0) 24%),
+        linear-gradient(120deg, #07080c 0%, #10131a 44%, #090a0f 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 76px 76px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), transparent 78%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.09;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.18) 0, rgba(255,255,255,0.18) 1px, transparent 1px, transparent 4px);
+      mix-blend-mode: overlay;
+    }
+
+    a {
+      color: #f2cf8f;
+    }
+
+    a:hover {
+      color: #ffe7b5;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      padding: 0 26px 70px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin: 0 -26px 0;
+      padding: 20px 26px;
+      border-bottom-color: rgba(246, 239, 229, 0.12);
+      background: rgba(7, 8, 12, 0.8);
+      backdrop-filter: blur(18px);
+    }
+
+    .label {
+      color: var(--teal);
+    }
+
+    h1 {
+      max-width: 1040px;
+      margin-top: 68px;
+      color: var(--ink);
+      font-size: 58px;
+      text-wrap: balance;
+      text-shadow: 0 14px 42px rgba(0, 0, 0, 0.36);
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-size: 30px;
+    }
+
+    h2::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), rgba(215, 177, 117, 0));
+    }
+
+    h3,
+    .card strong {
+      color: var(--ink);
+    }
+
+    .lead,
+    .card p,
+    .mini-card p {
+      color: var(--muted);
+    }
+
+    .thesis {
+      border-left-color: var(--teal);
+      color: #f4dfb3;
+      background: rgba(215, 177, 117, 0.1);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .card,
+    .mini-card,
+    .visual,
+    .pain-list,
+    .note,
+    table {
+      border-color: rgba(246, 239, 229, 0.15);
+      background: var(--panel);
+      box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+    }
+
+    .metric {
+      border-top-color: var(--teal);
+    }
+
+    .visual {
+      background: #f8fafc;
+    }
+
+    .visual img {
+      background: #f8fafc;
+    }
+
+    .pain-row {
+      border-bottom-color: rgba(246, 239, 229, 0.12);
+    }
+
+    .pain-row span {
+      color: var(--muted);
+    }
+
+    .score {
+      color: #f3c683;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      border-bottom-color: rgba(246, 239, 229, 0.12);
+      color: rgba(246, 239, 229, 0.76);
+    }
+
+    th {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .note {
+      color: #f4dfb3;
+      background: rgba(215, 177, 117, 0.1);
+    }
+
+    .model-strip div {
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+    }
+
+    .footer {
+      border-top-color: rgba(246, 239, 229, 0.12);
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      .wrap {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      .topbar {
+        margin-right: -18px;
+        margin-left: -18px;
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      h1 {
+        margin-top: 46px;
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div>
+        <div class="label">Growth Operations Case · Overseas Market</div>
+        <strong>海外潮玩二手交易 App 增长策略研究</strong>
+      </div>
+      <div class="label">Public-source desk research · 2026</div>
+    </div>
+
+    <h1>从「找流量」转向「建立交易信任」</h1>
+    <p class="lead">这个项目模拟一个海外 C2C 潮玩二手交易 App 的增长策略。重点不是做一个好看的表格，而是展示如何用公开数据、竞品机制和社区反馈推翻初始假设，形成可执行的增长方案。</p>
+    <div class="thesis">核心结论：海外潮玩用户不缺兴趣，卡住转化的是真假鉴定、卖家可信、支付保护和价格透明。增长策略应先把 trust proof 前置，再用 TikTok/KOC 和 Reddit/Discord 放大。</div>
+
+    <section>
+      <h2>1. Evidence Board</h2>
+      <div class="visual"><img src="visuals/01_evidence_scoreboard.svg" alt="Evidence board with market, community, and risk signals"></div>
+      <div class="grid cols-3">
+        <div class="card metric"><strong>市场需求</strong><span class="big">POP MART + Whatnot</span><p>用财报和平台报告证明海外潮玩与直播交易有足够需求基础。</p></div>
+        <div class="card metric"><strong>社区意图</strong><span class="big">Reddit + TikTok</span><p>用户已经在讨论展示、买卖、补货、真假判断和交易问题。</p></div>
+        <div class="card metric"><strong>交易风险</strong><span class="big">CPSC + BBB</span><p>假货与诈骗信号说明信任不是附加项，而是转化前提。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Thinking Process</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>初始假设</h3>
+          <p>增长 = TikTok 曝光 + KOL 开箱 + 裂变活动。这个想法可以带来流量，但解释不了用户为什么愿意把钱交给一个新的 C2C 平台。</p>
+        </div>
+        <div class="card">
+          <h3>修正判断</h3>
+          <p>公开证据显示，成熟平台都在强调 buyer protection、authentication、shipping protection；社区也在讨论 payment、real or fake、buy/sell/trade。所以核心问题不是兴趣，而是信任。</p>
+        </div>
+      </div>
+      <div class="visual"><img src="visuals/02_user_path_model.svg" alt="User path model"></div>
+    </section>
+
+    <section>
+      <h2>3. Trust Barrier Model</h2>
+      <p class="lead">我把来源证据按痛点编码，再放到用户路径里。热力图的意义是：不是所有痛点都同等重要，增长动作要优先解决高风险阶段。</p>
+      <div class="visual"><img src="visuals/03_trust_barrier_heatmap.svg" alt="Trust barrier heatmap"></div>
+      <div class="pain-list">
+  <div class="pain-row">
+    <div class="pain-dot" style="background:#E94F37"></div>
+    <div>
+      <strong>真假鉴定与假货风险</strong>
+      <span>这个是不是正品？买到假的怎么办？</span>
+    </div>
+    <div class="score">5/5</div>
+  </div>
+
+  <div class="pain-row">
+    <div class="pain-dot" style="background:#F59E0B"></div>
+    <div>
+      <strong>支付与交易信任</strong>
+      <span>钱打过去后，对方不发货怎么办？</span>
+    </div>
+    <div class="score">5/5</div>
+  </div>
+
+  <div class="pain-row">
+    <div class="pain-dot" style="background:#8B5CF6"></div>
+    <div>
+      <strong>卖家可信度</strong>
+      <span>这个卖家可靠吗？评价是不是刷的？</span>
+    </div>
+    <div class="score">4/5</div>
+  </div>
+
+  <div class="pain-row">
+    <div class="pain-dot" style="background:#0EA5E9"></div>
+    <div>
+      <strong>价格与溢价透明</strong>
+      <span>现在这个价格是不是被炒高了？</span>
+    </div>
+    <div class="score">4/5</div>
+  </div>
+
+  <div class="pain-row">
+    <div class="pain-dot" style="background:#10B981"></div>
+    <div>
+      <strong>补货与抢购焦虑</strong>
+      <span>什么时候补货？错过是不是只能高价买？</span>
+    </div>
+    <div class="score">3/5</div>
+  </div>
+
+  <div class="pain-row">
+    <div class="pain-dot" style="background:#EC4899"></div>
+    <div>
+      <strong>收藏展示与社群身份</strong>
+      <span>我想晒收藏，也想找同好交流。</span>
+    </div>
+    <div class="score">3/5</div>
+  </div>
+</div>
+    </section>
+
+    <section>
+      <h2>4. Competitor Strategy</h2>
+      <div class="visual"><img src="visuals/04_competitor_positioning.svg" alt="Competitor positioning chart"></div>
+      <div class="grid cols-2">
+  <article class="mini-card">
+    <div class="mini-top">
+      <span class="swatch" style="background:#8B5CF6"></span>
+      <h3>Whatnot</h3>
+    </div>
+    <p><strong>模式：</strong>直播拍卖 + 强交易保护</p>
+    <p><strong>优势：</strong>Live social commerce and trust infrastructure</p>
+    <p><strong>缺口：</strong>Less suitable for slow browsing and collection management</p>
+  </article>
+  <article class="mini-card">
+    <div class="mini-top">
+      <span class="swatch" style="background:#2563EB"></span>
+      <h3>Mercari</h3>
+    </div>
+    <p><strong>模式：</strong>横向 C2C 二手交易</p>
+    <p><strong>优势：</strong>Simple listing, protection policy, broad supply</p>
+    <p><strong>缺口：</strong>Community identity and toy-specific authenticity are weaker</p>
+  </article>
+  <article class="mini-card">
+    <div class="mini-top">
+      <span class="swatch" style="background:#F472B6"></span>
+      <h3>POP MART / TikTok Shop</h3>
+    </div>
+    <p><strong>模式：</strong>官方新品 + 内容电商</p>
+    <p><strong>优势：</strong>Brand heat, official supply, TikTok discovery</p>
+    <p><strong>缺口：</strong>Limited secondhand liquidity and collector-to-collector trust</p>
+  </article>
+  <article class="mini-card">
+    <div class="mini-top">
+      <span class="swatch" style="background:#F97316"></span>
+      <h3>Reddit BST Communities</h3>
+    </div>
+    <p><strong>模式：</strong>兴趣社区内交易意向</p>
+    <p><strong>优势：</strong>Authentic user discussions and high-intent topics</p>
+    <p><strong>缺口：</strong>No native escrow, verification, or standard dispute process</p>
+  </article>
+  <article class="mini-card">
+    <div class="mini-top">
+      <span class="swatch" style="background:#14B8A6"></span>
+      <h3>Proposed App</h3>
+    </div>
+    <p><strong>模式：</strong>可信 C2C + 收藏社区</p>
+    <p><strong>优势：</strong>Combine authenticity proof, protected transaction, and UGC</p>
+    <p><strong>缺口：</strong>Needs early supply and community trust seeding</p>
+  </article></div>
+    </section>
+
+    <section>
+      <h2>5. Content & Community Experiments</h2>
+      <div class="visual"><img src="visuals/05_content_experiment_matrix.svg" alt="Content experiment matrix"></div>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>TikTok</h3>
+          <p>做 4 条内容支柱：真假鉴定、安全交易流程、价格解释、开箱/展示。每条只测一个核心信息点，避免只追播放量。</p>
+        </div>
+        <div class="card">
+          <h3>Reddit / Discord</h3>
+          <p>先做社区倾听和实用内容：weekly real-or-fake thread、price check、buyer safety guide、collector AMA。这里的目标是建立可信度，不是硬广。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. KOL/KOC Model</h2>
+      <div class="visual"><img src="visuals/07_kol_scoring_model.svg" alt="KOL scoring model"></div>
+      <table>
+        <thead><tr><th>#</th><th>候选</th><th>定位</th><th>评分</th><th>首轮测试</th></tr></thead>
+        <tbody>
+  <tr>
+    <td>1</td>
+    <td>@bigintojay</td>
+    <td>collector educator / hub</td>
+    <td>94</td>
+    <td>Lead authenticity Q&amp;A + creator hub intro</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>@idontfeedbirdz</td>
+    <td>knowledge creator</td>
+    <td>90</td>
+    <td>Fake-vs-real duet/stitch test</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>@pinemiddleschool</td>
+    <td>knowledge creator</td>
+    <td>80</td>
+    <td>Price guide and collection-care post</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>@ClickNAutomation</td>
+    <td>knowledge creator</td>
+    <td>74</td>
+    <td>Automation/restock alert angle</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>@thearcadecyclist</td>
+    <td>collector/lifestyle</td>
+    <td>76</td>
+    <td>Collection story + listing CTA</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>@lat3esh</td>
+    <td>knowledge creator</td>
+    <td>76</td>
+    <td>Beginner buying checklist</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>@beautybyredd</td>
+    <td>lifestyle collector</td>
+    <td>76</td>
+    <td>OOTD + safe-buy caption</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>@azgirlmom</td>
+    <td>family/lifestyle collector</td>
+    <td>76</td>
+    <td>Gift-buying safety checklist</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>@ARMAN</td>
+    <td>collector community</td>
+    <td>64</td>
+    <td>Collection showcase test</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>@dbagel</td>
+    <td>collector community</td>
+    <td>66</td>
+    <td>UGC challenge seed</td>
+  </tr></tbody>
+      </table>
+      <p class="note">这不是已合作名单，而是候选池。正式 outreach 前必须刷新粉丝地域、近 30 天播放、互动质量、报价和品牌安全。</p>
+    </section>
+
+    <section>
+      <h2>7. Growth Measurement</h2>
+      <div class="visual"><img src="visuals/06_growth_funnel.svg" alt="AARRR growth funnel"></div>
+      <table>
+        <thead><tr><th>层级</th><th>指标</th><th>中文口径</th><th>为什么看它</th></tr></thead>
+        <tbody><tr><td>North-star</td><td>Protected transaction completed</td><td>受保护成交数</td><td>Final behavior that proves both demand and trust</td></tr><tr><td>Acquisition</td><td>CTR from TikTok/Reddit</td><td>点击率</td><td>Separates creative interest from real intent</td></tr><tr><td>Activation</td><td>Verified first action rate</td><td>完成首次搜索/收藏/认证率</td><td>Shows whether users understand the product value</td></tr><tr><td>Trust</td><td>Authentication-complete rate</td><td>认证资料完成率</td><td>Measures trust feature adoption before purchase</td></tr><tr><td>Conversion</td><td>Checkout start to paid order</td><td>结账到支付转化</td><td>Finds pricing/shipping/payment friction</td></tr><tr><td>Quality</td><td>Dispute rate / counterfeit claim rate</td><td>纠纷率/假货申诉率</td><td>Guardrail: growth cannot trade off with trust</td></tr><tr><td>Retention</td><td>D7 return and wishlist revisit</td><td>7日回访/愿望单回访</td><td>Signals collection habit formation</td></tr><tr><td>Creator</td><td>Cost per activated user by creator</td><td>创作者激活用户成本</td><td>Evaluates KOL/KOC beyond views</td></tr></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>8. Growth Strategy</h2>
+      <div class="model-strip">
+        <div style="background:var(--red)">Trust proof<span>认证、保护、卖家信用前置</span></div>
+        <div style="background:var(--blue)">Price clarity<span>展示官方零售价与近期成交区间</span></div>
+        <div style="background:var(--violet)">KOC testing<span>小预算多主题验证内容</span></div>
+        <div style="background:var(--orange)">Community seeding<span>Reddit/Discord 先做可信内容</span></div>
+        <div style="background:var(--green)">AARRR review<span>用转化与纠纷率一起决策</span></div>
+      </div>
+      <p class="lead">一句话策略：把「我想买」变成「我敢买」，再用内容和社群把高信任交易体验扩散出去。</p>
+    </section>
+
+    <section>
+      <h2>9. Evidence Index</h2>
+      <table>
+        <thead><tr><th>ID</th><th>类型</th><th>来源</th><th>关键数据</th><th>项目用途</th></tr></thead>
+        <tbody>
+  <tr>
+    <td>S01</td>
+    <td>market</td>
+    <td><a href="https://www.prnewswire.com/news-releases/pop-mart-reports-first-half-2026-financial-results-announces-future-stock-buyback-plan-302856357.html">POP MART H1 2026 results</a></td>
+    <td>RMB 17.17bn, +23.8% YoY</td>
+    <td>Proves global collectible demand is not a niche assumption.</td>
+  </tr>
+  <tr>
+    <td>S02</td>
+    <td>market</td>
+    <td><a href="https://blog.teamwhatnot.com/unitedstates/2026livesellingreport">Whatnot 2026 State of Live Selling</a></td>
+    <td>$22bn market; Whatnot nearly 60% share; sellers drove $8bn live sales in 2025</td>
+    <td>Supports social-commerce mechanics for collectibles.</td>
+  </tr>
+  <tr>
+    <td>S03</td>
+    <td>trust</td>
+    <td><a href="https://trust.whatnot.com/">Whatnot Trust Center</a></td>
+    <td>About one in three employees works in Trust and Safety</td>
+    <td>Shows trust is a core operating layer, not a back-office feature.</td>
+  </tr>
+  <tr>
+    <td>S04</td>
+    <td>trust</td>
+    <td><a href="https://help.whatnot.com/hc/en-us/articles/360061194552-Whatnot-Buyer-Protection-Policy">Whatnot Buyer Protection Policy</a></td>
+    <td>Covers counterfeit/fake, not-as-described, damaged/lost, and non-delivery cases</td>
+    <td>Benchmark for trust promises in a C2C collectibles marketplace.</td>
+  </tr>
+  <tr>
+    <td>S05</td>
+    <td>monetization</td>
+    <td><a href="https://help.whatnot.com/hc/en-us/articles/4847069165965-Whatnot-seller-fees">Whatnot seller fees</a></td>
+    <td>8% commission up to $1,500 plus 2.9% + $0.30 payment processing</td>
+    <td>Benchmark for seller-side marketplace economics.</td>
+  </tr>
+  <tr>
+    <td>S06</td>
+    <td>trust</td>
+    <td><a href="https://www.mercari.com/us/help_center/topics/account/policies/seller-protection/">Mercari Seller Protection</a></td>
+    <td>Free listing; 10% selling fee; up to $200 shipping protection</td>
+    <td>Benchmark for listing flow, protected payment, and shipping guardrails.</td>
+  </tr>
+  <tr>
+    <td>S07</td>
+    <td>monetization</td>
+    <td><a href="https://www.mercari.com/us/help_center/article/169/">Mercari fees</a></td>
+    <td>Buyer protection fee 3.6%; seller fee 10%</td>
+    <td>Frames marketplace fee transparency as a conversion factor.</td>
+  </tr>
+  <tr>
+    <td>S08</td>
+    <td>trust</td>
+    <td><a href="https://www.mercari.com/us/help_center/article/475/">Mercari Authenticate</a></td>
+    <td>Real Authentication evaluates item photos and responds within 48 hours</td>
+    <td>Benchmark for authenticity proof workflow.</td>
+  </tr>
+  <tr>
+    <td>S09</td>
+    <td>community</td>
+    <td><a href="https://gummysearch.com/r/labubu/">GummySearch r/labubu</a></td>
+    <td>190k members; top flairs include Display/OOTD/Collection, Customization, Haul, Discussion</td>
+    <td>Evidence that identity/community content creates sustained interest.</td>
+  </tr>
+  <tr>
+    <td>S10</td>
+    <td>community</td>
+    <td><a href="https://gummysearch.com/r/LabubuDrops/">GummySearch r/LabubuDrops</a></td>
+    <td>43k members; BUY/SELL/TRADE flair count 173; Payment topic count 100</td>
+    <td>Shows users discuss buying, selling, payment, stock, and real/fake checks.</td>
+  </tr>
+  <tr>
+    <td>S11</td>
+    <td>risk</td>
+    <td><a href="https://www.cpsc.gov/Recalls/2025/Consumer-Safety-Alert-CPSC-Issues-Urgent-Safety-Warning-to-Labubu-Collectors">U.S. CPSC Labubu fake warning</a></td>
+    <td>Warns fake Labubu toys may pose choking hazards; gives QR, hologram, UV stamp checks</td>
+    <td>Turns authenticity from a preference into a safety/trust requirement.</td>
+  </tr>
+  <tr>
+    <td>S12</td>
+    <td>risk</td>
+    <td><a href="https://www.bbb.org/scamtracker/lookupscam?q=all%3DLABUBU%26from%3D0">BBB Scam Tracker Labubu search</a></td>
+    <td>227 search results for Labubu-related scam reports</td>
+    <td>Validates fake/no-delivery fears in public complaint data.</td>
+  </tr>
+  <tr>
+    <td>S13</td>
+    <td>commerce</td>
+    <td><a href="https://shop.tiktok.com/us/k/popmartthemonsters">TikTok Shop POPMART search page</a></td>
+    <td>POPMART US SHOP 4.8 rating, 2.6M sold, 862.1k+ followers</td>
+    <td>Supports TikTok as a discovery-to-commerce channel.</td>
+  </tr>
+  <tr>
+    <td>S14</td>
+    <td>creator</td>
+    <td><a href="https://sproutsocial.com/insights/data/2026-influencer-marketing-report/">Sprout Social 2026 Influencer Marketing Report</a></td>
+    <td>Follower count is less reliable than content relevance and audience fit</td>
+    <td>Supports using a weighted KOC/KOL score instead of follower-count sorting.</td>
+  </tr>
+  <tr>
+    <td>S15</td>
+    <td>creator</td>
+    <td><a href="https://www.creatoriq.com/press/releases/creator-powered-funnel-report-2026">CreatorIQ Creator-Powered Funnel Report</a></td>
+    <td>Creator content is used across paid media; report cites CTR/conversion/CPM advantages</td>
+    <td>Supports reusing KOC content as paid creatives after organic validation.</td>
+  </tr>
+  <tr>
+    <td>S16</td>
+    <td>creator</td>
+    <td><a href="https://ads.tiktok.com/help/article/about-tiktoks-content-quality-standard-for-creator-commercial-content?lang=en">TikTok creator commercial content quality standard</a></td>
+    <td>Best practices emphasize real usage, genuine feelings, product value, and early hook</td>
+    <td>Turns TikTok content plan into a testable creative brief.</td>
+  </tr>
+  <tr>
+    <td>S17</td>
+    <td>verification</td>
+    <td><a href="https://labubucollector.com/about/">LabubuCollector About</a></td>
+    <td>Collector site studies authentic and fake dolls side by side</td>
+    <td>Supports authenticity education as a content/product feature.</td>
+  </tr>
+  <tr>
+    <td>S18</td>
+    <td>resale</td>
+    <td><a href="https://www.modernretail.co/marketing/the-rise-of-labubunomics-how-merchants-and-marketplaces-are-cashing-in-on-the-viral-pop-mart-toy/">Modern Retail Labubunomics</a></td>
+    <td>Article reports StockX verifies boxes using QR-code checks and monitors fakes</td>
+    <td>Supports building verification into the resale flow.</td>
+  </tr>
+  <tr>
+    <td>S19</td>
+    <td>kol</td>
+    <td><a href="https://linktr.ee/bigintojay">BigIntoJay Linktree</a></td>
+    <td>Public list of Labubu-related creators and community accounts</td>
+    <td>Seed source for the 20-candidate KOL/KOC shortlist.</td>
+  </tr></tbody>
+      </table>
+    </section>
+
+    <div class="footer">Created as a growth operations resume case. Public facts are cited; funnel numbers and scores are planning assumptions for interview discussion.</div>
+  </main>
+</body>
+</html>

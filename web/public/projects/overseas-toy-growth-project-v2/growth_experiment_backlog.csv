@@ -1,0 +1,9 @@
+id,experiment,reach,impact,confidence,effort,riceScore,rationale
+E01,Pre-listing authenticity checklist,800,4,0.75,2,1200,High trust impact with moderate effort; should ship before paid scaling.
+E02,Fake-vs-real TikTok series,1200,3,0.7,2,1260,Matches CPSC/BBB risk evidence and TikTok creator quality guidance.
+E03,Seller trust badge on product card,700,4,0.65,3,607,Directly reduces seller credibility friction at Evaluate stage.
+E04,Recent transaction price band,600,3,0.6,3,360,Targets overpay anxiety; needs reliable transaction data.
+E05,Reddit weekly real-or-fake thread,350,3,0.65,1,683,Low effort insight channel; respects community norms better than direct ads.
+E06,Verified Collector Pass referral,500,4,0.55,2,550,Useful only after trust proof is live; guardrail required for low-quality referrals.
+E07,KOC content whitelisting / paid boost,900,3,0.5,4,338,Scale only after organic KOC creative wins; needs creator usage rights.
+E08,Buyer protection explainer on checkout,650,4,0.7,2,910,Close to payment friction and easy to A/B test.

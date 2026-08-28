@@ -1,0 +1,47 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560">
+  <rect width="1120" height="560" fill="#ffffff"/>
+  <text x="48" y="44" font-size="26" font-weight="800" fill="#0f172a">Competitor positioning: content-commerce vs transaction trust</text>
+  <text x="48" y="72" font-size="15" fill="#475569">Position scores are synthesis scores from public sources, not official rankings.</text>
+  <rect x="120" y="90" width="850" height="360" fill="#f8fafc" stroke="#cbd5e1"/>
+  
+      <line x1="120" y1="90" x2="120" y2="450" stroke="#e2e8f0"/>
+      <line x1="120" y1="90" x2="970" y2="90" stroke="#e2e8f0"/>
+    
+      <line x1="290" y1="90" x2="290" y2="450" stroke="#e2e8f0"/>
+      <line x1="120" y1="162" x2="970" y2="162" stroke="#e2e8f0"/>
+    
+      <line x1="460" y1="90" x2="460" y2="450" stroke="#e2e8f0"/>
+      <line x1="120" y1="234" x2="970" y2="234" stroke="#e2e8f0"/>
+    
+      <line x1="630" y1="90" x2="630" y2="450" stroke="#e2e8f0"/>
+      <line x1="120" y1="306" x2="970" y2="306" stroke="#e2e8f0"/>
+    
+      <line x1="800" y1="90" x2="800" y2="450" stroke="#e2e8f0"/>
+      <line x1="120" y1="378" x2="970" y2="378" stroke="#e2e8f0"/>
+    
+      <line x1="970" y1="90" x2="970" y2="450" stroke="#e2e8f0"/>
+      <line x1="120" y1="450" x2="970" y2="450" stroke="#e2e8f0"/>
+    
+  <rect x="698" y="90" width="272" height="115.20000000000002" fill="#ccfbf1" opacity="0.55" stroke="#14b8a6" stroke-dasharray="8 6"/>
+  <text x="719.25" y="106.19999999999999" font-size="14" font-weight="800" fill="#0f766e">target zone</text>
+  
+      <circle cx="868.0000000000001" cy="154.8" r="13" fill="#8B5CF6" stroke="#ffffff" stroke-width="3"/>
+      <text x="888.0000000000001" y="186.8" font-size="14" font-weight="800" fill="#0f172a">Whatnot</text>
+    
+      <circle cx="477.00000000000006" cy="169.2" r="13" fill="#2563EB" stroke="#ffffff" stroke-width="3"/>
+      <text x="497.00000000000006" y="201.2" font-size="14" font-weight="800" fill="#0f172a">Mercari</text>
+    
+      <circle cx="766" cy="255.6" r="13" fill="#F472B6" stroke="#ffffff" stroke-width="3"/>
+      <text x="786" y="287.6" font-size="14" font-weight="800" fill="#0f172a">POP MART / TikTok Shop</text>
+    
+      <circle cx="613" cy="284.4" r="13" fill="#F97316" stroke="#ffffff" stroke-width="3"/>
+      <text x="633" y="316.4" font-size="14" font-weight="800" fill="#0f172a">Reddit BST Communities</text>
+    
+      <circle cx="749" cy="129.60000000000002" r="16" fill="#14B8A6" stroke="#ffffff" stroke-width="3"/>
+      <text x="769" y="107.60000000000002" font-size="14" font-weight="800" fill="#0f172a">Proposed App</text>
+    
+  <text x="545" y="496" text-anchor="middle" font-size="15" font-weight="800" fill="#334155">Content-commerce intensity</text>
+  <text x="34" y="270" text-anchor="middle" font-size="15" font-weight="800" fill="#334155" transform="rotate(-90 34 270)">Trust / protection strength</text>
+  <text x="930" y="505" font-size="13" fill="#64748b">Strategic opening: not another generic marketplace, but a collectible-native trust layer plus community content.</text>
+</svg>

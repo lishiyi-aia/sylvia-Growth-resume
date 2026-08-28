@@ -1,0 +1,45 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="570" viewBox="0 0 1120 570">
+  <rect width="1120" height="570" fill="#ffffff"/>
+  <text x="48" y="44" font-size="26" font-weight="800" fill="#0f172a">AARRR planning funnel with trust guardrails</text>
+  <text x="48" y="72" font-size="15" fill="#475569">This is a planning model, not claimed campaign performance. Replace each assumption with real cohort data after launch.</text>
+  
+      <text x="56" y="124" font-size="18" font-weight="800" fill="#0f172a">触达</text>
+      <text x="150" y="124" font-size="13" fill="#64748b">TikTok/Reddit impressions</text>
+      <rect x="430" y="98" width="760" height="34" rx="7" fill="#e2e8f0"/>
+      <rect x="430" y="98" width="760" height="34" rx="7" fill="#334155"/>
+      <text x="1030" y="121" font-size="14" font-weight="800" fill="#0f172a">100,000 · 100%</text>
+    
+      <text x="56" y="190" font-size="18" font-weight="800" fill="#0f172a">点击</text>
+      <text x="150" y="190" font-size="13" fill="#64748b">Profile/link clicks</text>
+      <rect x="430" y="164" width="760" height="34" rx="7" fill="#e2e8f0"/>
+      <rect x="430" y="164" width="48" height="34" rx="7" fill="#0EA5E9"/>
+      <text x="492" y="187" font-size="14" font-weight="800" fill="#0f172a">1,500 · 1.5% CTR</text>
+    
+      <text x="56" y="256" font-size="18" font-weight="800" fill="#0f172a">注册</text>
+      <text x="150" y="256" font-size="13" fill="#64748b">Waitlist or account signup</text>
+      <rect x="430" y="230" width="760" height="34" rx="7" fill="#e2e8f0"/>
+      <rect x="430" y="230" width="48" height="34" rx="7" fill="#8B5CF6"/>
+      <text x="492" y="253" font-size="14" font-weight="800" fill="#0f172a">180 · 12% click-to-signup</text>
+    
+      <text x="56" y="322" font-size="18" font-weight="800" fill="#0f172a">激活</text>
+      <text x="150" y="322" font-size="13" fill="#64748b">Verify, wishlist, or first search</text>
+      <rect x="430" y="296" width="760" height="34" rx="7" fill="#e2e8f0"/>
+      <rect x="430" y="296" width="48" height="34" rx="7" fill="#F59E0B"/>
+      <text x="492" y="319" font-size="14" font-weight="800" fill="#0f172a">81 · 45% activation</text>
+    
+      <text x="56" y="388" font-size="18" font-weight="800" fill="#0f172a">交易意向</text>
+      <text x="150" y="388" font-size="13" fill="#64748b">Create listing or checkout start</text>
+      <rect x="430" y="362" width="760" height="34" rx="7" fill="#e2e8f0"/>
+      <rect x="430" y="362" width="48" height="34" rx="7" fill="#10B981"/>
+      <text x="492" y="385" font-size="14" font-weight="800" fill="#0f172a">18 · 22% of activated</text>
+    
+      <text x="56" y="454" font-size="18" font-weight="800" fill="#0f172a">成交</text>
+      <text x="150" y="454" font-size="13" fill="#64748b">Protected paid transaction</text>
+      <rect x="430" y="428" width="760" height="34" rx="7" fill="#e2e8f0"/>
+      <rect x="430" y="428" width="48" height="34" rx="7" fill="#E94F37"/>
+      <text x="492" y="451" font-size="14" font-weight="800" fill="#0f172a">6 · 33% intent-to-order</text>
+    
+  <rect x="56" y="512" width="1000" height="34" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="78" y="535" font-size="14" font-weight="800" fill="#9a3412">Guardrail: if dispute/counterfeit-claim rate rises, pause paid scaling even when acquisition metrics look good.</text>
+</svg>

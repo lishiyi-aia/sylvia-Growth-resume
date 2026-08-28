@@ -53,12 +53,12 @@ export interface WorksLang {
 
 export const WORKS: Record<'zh' | 'en', WorksLang> = {
   zh: {
-    title: '新品运营项目',
+    title: '增长运营项目',
     closeLabel: '返回',
     openLabel: '展开作品',
     hint: '继续下滑',
     awardsLabel: '获奖',
-    visitLabel: '访问作品',
+    visitLabel: '打开完整项目',
     detailPlaceholder: '你的作品介绍',
     phImageLabel: '图片 / 视频',
     phButtonLabel: '跳转按钮',
@@ -67,12 +67,32 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'project-1',
         no: '01',
+        title: '海外潮玩二手交易 App 增长策略研究',
+        tagline: '海外增长｜用户研究｜竞品分析｜信任转化｜KOL/KOC',
+        items: [
+          {
+            name: '海外潮玩二手交易 App 增长策略研究',
+            meta: 'Overseas Designer Toy Resale App Growth Strategy',
+            slug: 'overseas-toy-growth',
+            tags: [
+              '基于公开来源完成海外潮玩交易市场、竞品与社区痛点研究',
+              '用 Trust Barrier Model 将增长问题从流量不足重构为交易信任不足',
+              '设计 TikTok、Reddit、Discord 内容实验与 KOL/KOC 合作模型',
+              '输出 AARRR 指标、RICE 实验优先级与 Verified Collector Pass 裂变方案',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'project-2',
+        no: '02',
         title: 'AI资讯追踪App运营分析与问题归因面板',
         tagline: '新品运营｜多源数据整合｜用户路径诊断｜运营决策',
         items: [
           {
             name: 'AI资讯追踪App运营分析与问题归因面板',
             meta: 'AI Information Tracking App Operations Dashboard',
+            slug: 'ai-news-dashboard',
             tags: [
               '整合用户路径、行为埋点、问卷反馈与核心指标日报',
               'Funnel、Activation、Segments与Cross Analysis',
@@ -83,32 +103,15 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
         ],
       },
       {
-        id: 'project-2',
-        no: '02',
-        title: '海内外生成式AI教育产品试点',
-        tagline: '新品落地｜中国内地高校 × 东南亚教育机构',
-        items: [
-          {
-            name: '海内外生成式AI教育产品试点',
-            meta: 'Generative AI Education Product Pilots',
-            tags: [
-              '境内外教育市场、教学场景与用户需求研究',
-              '产品Demo、教师案例、课程方案与应用场景设计',
-              '用户试用、功能教学、使用指南与FAQ体系',
-              'B2B合作支持、用户反馈分析与产品优化闭环',
-            ],
-          },
-        ],
-      },
-      {
         id: 'project-3',
         no: '03',
-        title: 'ZUS Everywhere新品账号运营',
+        title: 'ZUS Coffee / ZUS Everywhere新品账号运营',
         tagline: '新品传播｜Instagram内容策略｜增长复盘',
         items: [
           {
-            name: 'ZUS Everywhere新品账号运营',
+            name: 'ZUS Coffee / ZUS Everywhere新品账号运营',
             meta: 'ZUS Everywhere New Product Social Operations',
+            slug: 'zus-everywhere',
             tags: [
               '新品内容调研、用户偏好分析与社媒卖点提炼',
               '完成50条Instagram内容的策划、拍摄、剪辑与英文文案',
@@ -121,12 +124,12 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     ],
   },
   en: {
-    title: 'New Product Operations',
+    title: 'Growth Operations Projects',
     closeLabel: 'Back',
     openLabel: 'Explore',
     hint: 'Keep scrolling',
     awardsLabel: 'Awards',
-    visitLabel: 'Visit site',
+    visitLabel: 'Open full case',
     detailPlaceholder: 'Your work description',
     phImageLabel: 'Image / Video',
     phButtonLabel: 'Link button',
@@ -135,12 +138,32 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'project-1',
         no: '01',
+        title: 'Overseas Designer Toy Resale App Growth Strategy',
+        tagline: 'Overseas Growth · User Research · Competitor Analysis · Trust Conversion',
+        items: [
+          {
+            name: 'Overseas Designer Toy Resale App Growth Strategy',
+            meta: '海外潮玩二手交易 App 增长策略研究',
+            slug: 'overseas-toy-growth',
+            tags: [
+              'Built a market, competitor, and community pain-point study from public sources',
+              'Reframed the growth challenge from traffic-led growth to trust-led conversion',
+              'Designed TikTok, Reddit, Discord, and KOL/KOC growth experiments',
+              'Delivered an AARRR KPI map, RICE backlog, and Verified Collector Pass referral plan',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'project-2',
+        no: '02',
         title: 'AI Information Tracking App Operations Dashboard',
         tagline: 'New Product Operations · Multi-source Data · User Journey · Decision Support',
         items: [
           {
             name: 'AI Information Tracking App Operations Dashboard',
             meta: 'AI资讯追踪App运营分析与问题归因面板',
+            slug: 'ai-news-dashboard',
             tags: [
               'Integrated user journey, event tracking, survey feedback, and KPI reporting',
               'Funnel, activation, segmentation, and cross-analysis',
@@ -151,32 +174,15 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
         ],
       },
       {
-        id: 'project-2',
-        no: '02',
-        title: 'Generative AI Education Product Pilots',
-        tagline: 'Product Launch · Universities in China · Education Partners in Southeast Asia',
-        items: [
-          {
-            name: 'Generative AI Education Product Pilots',
-            meta: '海内外生成式AI教育产品试点',
-            tags: [
-              'Research on education markets, teaching scenarios, and user needs',
-              'Product demos, teacher cases, course plans, and scenario design',
-              'User trials, feature teaching, usage guides, and FAQ systems',
-              'B2B support, user feedback analysis, and product optimization loops',
-            ],
-          },
-        ],
-      },
-      {
         id: 'project-3',
         no: '03',
-        title: 'ZUS Everywhere New Product Social Operations',
+        title: 'ZUS Coffee / ZUS Everywhere New Product Social Operations',
         tagline: 'Product Launch · Instagram Strategy · Growth Review',
         items: [
           {
-            name: 'ZUS Everywhere New Product Social Operations',
+            name: 'ZUS Coffee / ZUS Everywhere New Product Social Operations',
             meta: 'ZUS Everywhere新品账号运营',
+            slug: 'zus-everywhere',
             tags: [
               'Research on product content, user preferences, and social media positioning',
               'Planned, shot, edited, and wrote English copy for 50 Instagram posts',
@@ -193,8 +199,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
 // 板块配图（横向画廊每张卡片左侧的整高封面）。放到 public/works/covers/ 下。
 // 缺图时左栏用大编号渐变占位，放入图片后自动点亮。
 export const SECTION_COVERS: Record<string, string> = {
-  'project-1': `${import.meta.env.BASE_URL}works/covers/sohu-dashboard.png`,
-  'project-2': `${import.meta.env.BASE_URL}works/covers/education-pilot.png`,
+  'project-1': `${import.meta.env.BASE_URL}projects/overseas-toy-growth-project-v2/visuals/03_trust_barrier_heatmap.svg`,
+  'project-2': `${import.meta.env.BASE_URL}works/covers/sohu-dashboard.png`,
   'project-3': `${import.meta.env.BASE_URL}works/covers/zus-everywhere.jpg`,
 }
 

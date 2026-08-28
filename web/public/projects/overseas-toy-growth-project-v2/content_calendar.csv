@@ -1,0 +1,13 @@
+week,channel,idea,hypothesis,metric,sourceIds
+Week 1,TikTok,真假鉴定 15s：QR / hologram / UV stamp,Authenticity education can drive saves and profile clicks,"Save rate, comments asking for check, profile CTR","S11,S16,S17"
+Week 1,Reddit,Beginner buyer safety guide in r/labubu-style communities,Helpful non-sales content builds credibility,"Upvotes, useful replies, question themes","S09,S10,S11"
+Week 1,TikTok,开箱 + 价格标签：retail vs resale,Price clarity reduces overpay anxiety,"Completion rate, listing clicks","S01,S13,S18"
+Week 2,Discord,Collector identity roles + wishlist channel,Community identity increases return visits,"Role opt-ins, wishlist posts, D7 return","S09,S10"
+Week 2,TikTok,Seller story: how I verify and ship,Human seller proof increases trust,"Comment sentiment, signup CTR","S03,S04,S06"
+Week 2,Reddit,Weekly real-or-fake discussion prompt,Moderated authenticity Q&A reveals objections,"Replies, repeated questions, waitlist clicks","S10,S11,S17"
+Week 3,TikTok,Safe checkout walkthrough,Showing protected flow can convert high-intent users,"Click-to-signup, activation rate","S04,S06,S07"
+Week 3,Instagram,Collection wall carousel + seller badge explanation,Visual identity plus trust proof can support consideration,"Saves, shares, profile taps","S09,S14"
+Week 3,TikTok,KOC duet: real collector reacts to fake listing signs,KOC credibility can outperform brand-only claims,"CPE, signup quality, trust comments","S14,S15,S16"
+Week 4,Reddit,AMA: buying limited toys safely,Community dialogue lowers perceived platform risk,"Questions answered, referral clicks","S09,S10,S11"
+Week 4,TikTok,Drop calendar + wishlist reminder,"Scarcity content can drive activation, not only views","Wishlist adds, notification opt-in","S10,S13"
+Week 4,All,Verified Collector Pass referral launch,Referral works better after trust proof exists,"Invite conversion, activated referral rate, dispute guardrail",Model

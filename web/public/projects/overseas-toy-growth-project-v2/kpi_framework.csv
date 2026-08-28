@@ -1,0 +1,9 @@
+level,metric,cn,reason
+North-star,Protected transaction completed,受保护成交数,Final behavior that proves both demand and trust
+Acquisition,CTR from TikTok/Reddit,点击率,Separates creative interest from real intent
+Activation,Verified first action rate,完成首次搜索/收藏/认证率,Shows whether users understand the product value
+Trust,Authentication-complete rate,认证资料完成率,Measures trust feature adoption before purchase
+Conversion,Checkout start to paid order,结账到支付转化,Finds pricing/shipping/payment friction
+Quality,Dispute rate / counterfeit claim rate,纠纷率/假货申诉率,Guardrail: growth cannot trade off with trust
+Retention,D7 return and wishlist revisit,7日回访/愿望单回访,Signals collection habit formation
+Creator,Cost per activated user by creator,创作者激活用户成本,Evaluates KOL/KOC beyond views

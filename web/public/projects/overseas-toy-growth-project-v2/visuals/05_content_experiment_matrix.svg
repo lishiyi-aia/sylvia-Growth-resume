@@ -1,0 +1,39 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560">
+  <rect width="1120" height="560" fill="#ffffff"/>
+  <text x="48" y="44" font-size="26" font-weight="800" fill="#0f172a">Content experiment matrix</text>
+  <text x="48" y="72" font-size="15" fill="#475569">Do not only chase views. Test entertainment and trust-building separately, then scale the winners.</text>
+  <rect x="120" y="92" width="850" height="360" fill="#f8fafc" stroke="#cbd5e1"/>
+  <line x1="545" y1="92" x2="545" y2="452" stroke="#cbd5e1" stroke-dasharray="8 6"/>
+  <line x1="120" y1="272" x2="970" y2="272" stroke="#cbd5e1" stroke-dasharray="8 6"/>
+  <text x="324" y="110" font-size="14" font-weight="800" fill="#334155">Trust education</text>
+  <text x="749" y="110" font-size="14" font-weight="800" fill="#334155">Best test zone</text>
+  <text x="732" y="412.4" font-size="14" font-weight="800" fill="#334155">Entertainment pull</text>
+  
+      <circle cx="613" cy="120.80000000000001" r="18" fill="#E94F37" opacity="0.9" stroke="#fff" stroke-width="3"/>
+      <text x="639" y="125.80000000000001" font-size="14" font-weight="800" fill="#0f172a">真假鉴定 15s</text>
+      <text x="639" y="143.8" font-size="12" fill="#64748b">save rate, comment questions</text>
+    
+      <circle cx="868.0000000000001" cy="293.59999999999997" r="16" fill="#EC4899" opacity="0.9" stroke="#fff" stroke-width="3"/>
+      <text x="892.0000000000001" y="298.59999999999997" font-size="14" font-weight="800" fill="#0f172a">开箱/展示 OOTD</text>
+      <text x="892.0000000000001" y="316.59999999999997" font-size="12" fill="#64748b">watch completion, follows</text>
+    
+      <circle cx="468.5" cy="146" r="16" fill="#F59E0B" opacity="0.9" stroke="#fff" stroke-width="3"/>
+      <text x="492.5" y="151" font-size="14" font-weight="800" fill="#0f172a">安全交易流程</text>
+      <text x="492.5" y="169" font-size="12" fill="#64748b">signup CTR, dispute-page views</text>
+    
+      <circle cx="579" cy="200.00000000000003" r="15" fill="#0EA5E9" opacity="0.9" stroke="#fff" stroke-width="3"/>
+      <text x="602" y="205.00000000000003" font-size="14" font-weight="800" fill="#0f172a">价格区间解释</text>
+      <text x="602" y="223.00000000000003" font-size="12" fill="#64748b">click-to-listing</text>
+    
+      <circle cx="800" cy="243.20000000000002" r="15" fill="#10B981" opacity="0.9" stroke="#fff" stroke-width="3"/>
+      <text x="823" y="248.20000000000002" font-size="14" font-weight="800" fill="#0f172a">补货/Drop 追踪</text>
+      <text x="823" y="266.20000000000005" font-size="12" fill="#64748b">wishlist adds</text>
+    
+      <circle cx="655.5" cy="214.40000000000003" r="14" fill="#8B5CF6" opacity="0.9" stroke="#fff" stroke-width="3"/>
+      <text x="677.5" y="219.40000000000003" font-size="14" font-weight="800" fill="#0f172a">卖家故事</text>
+      <text x="677.5" y="237.40000000000003" font-size="12" fill="#64748b">DM inquiries</text>
+    
+  <text x="545" y="500" text-anchor="middle" font-size="15" font-weight="800" fill="#334155">Entertainment / shareability</text>
+  <text x="34" y="272" text-anchor="middle" font-size="15" font-weight="800" fill="#334155" transform="rotate(-90 34 272)">Trust-building strength</text>
+</svg>

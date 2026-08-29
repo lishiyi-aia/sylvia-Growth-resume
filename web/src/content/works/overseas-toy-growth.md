@@ -49,6 +49,6 @@ link: projects/overseas-toy-growth-project-v2/portfolio_case_study.html
 - 达人模型：KOL/KOC 候选池与合作优先级评分。
 - 指标体系：North Star、AARRR、RICE 实验优先级与增长护栏。
 
-## 项目价值
+## 项目总结
 
-这个项目展示的是增长运营中的判断能力：不是先做活动、堆渠道、找达人，而是先判断“用户为什么不转化”，再把用户路径、内容策略、产品信任机制和指标复盘连成闭环。
+这个项目最终形成一套 trust-led growth 策略：先判断用户从种草到交易之间的信任阻碍，再把用户路径、内容策略、产品信任机制、达人合作和指标复盘连成完整闭环。

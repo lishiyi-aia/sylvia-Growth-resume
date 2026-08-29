@@ -105,18 +105,18 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'project-3',
         no: '03',
-        title: 'ZUS Coffee / ZUS Everywhere新品账号运营',
-        tagline: '新品传播｜竞品IG分析｜内容矩阵｜增长复盘',
+        title: 'ZUS Everywhere 新业务上市与内容增长',
+        tagline: '新品上市｜Instagram｜内容实验｜数据复盘',
         items: [
           {
-            name: 'ZUS Coffee / ZUS Everywhere 新品内容运营与社媒增长复盘',
-            meta: 'ZUS Everywhere New Product Social Operations',
+            name: 'ZUS Everywhere 新业务上市与 Instagram 内容增长',
+            meta: 'New Business Launch & Instagram Content Growth',
             slug: 'zus-everywhere',
             tags: [
-              '完成 ZUS Everywhere 新品内容定位与 Instagram 发布节奏',
-              '基于竞品社媒分析拆解新品、促销、App、门店与 UGC 玩法',
-              '用 Social AARRR 和内容矩阵规划认知、互动与试购路径',
-              '通过触达、评论、保存、主页访问、链接点击和粉丝增长复盘',
+              '参与 ZUS 从门店咖啡向 RTD / FMCG 新业务延展的内容冷启动',
+              '完成 50 条 Instagram 内容与 15+ 轮数据复盘迭代',
+              '建立从新品认知、场景兴趣到购买入口的 Content–Commerce 路径',
+              '项目期账号沉淀至 1.1w+ 粉丝；品牌首发结果为 10,000 盒 10 天售罄',
             ],
           },
         ],
@@ -176,18 +176,18 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'project-3',
         no: '03',
-        title: 'ZUS Coffee / ZUS Everywhere New Product Social Operations',
-        tagline: 'Product Launch · IG Benchmarking · Content Matrix · Growth Review',
+        title: 'ZUS Everywhere New Business Launch & Content Growth',
+        tagline: 'Product Launch · Instagram · Content Experiments · Data Review',
         items: [
           {
-            name: 'ZUS Coffee / ZUS Everywhere Content Growth Review',
-            meta: 'ZUS Everywhere新品账号运营',
+            name: 'ZUS Everywhere New Business Launch & Instagram Growth',
+            meta: 'ZUS Everywhere 新业务上市与内容增长',
             slug: 'zus-everywhere',
             tags: [
-              'Owned ZUS Everywhere product content positioning and Instagram launch rhythm',
-              'Benchmarked beverage brand content across product, promotion, app, store, and UGC plays',
-              'Used Social AARRR and content matrices to plan awareness, engagement, and trial paths',
-              'Reviewed reach, comments, saves, profile visits, link clicks, and follower growth',
+              'Supported the content launch as ZUS expanded from cafes into RTD and FMCG products',
+              'Delivered 50 Instagram assets and 15+ rounds of performance-led iteration',
+              'Built a Content–Commerce journey from product discovery to purchase access',
+              'Account reached 11k+ scale; brand launch result: 10,000 boxes sold in 10 days',
             ],
           },
         ],

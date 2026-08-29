@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZUS Coffee / ZUS Everywhere 新品账号运营</title>
+  <style>
+    :root {
+      --ink: #f6efe5;
+      --body: rgba(246, 239, 229, 0.78);
+      --muted: rgba(246, 239, 229, 0.54);
+      --line: rgba(246, 239, 229, 0.16);
+      --panel: rgba(19, 22, 30, 0.82);
+      --panel-soft: rgba(255, 255, 255, 0.055);
+      --gold: #d7b175;
+      --blue: #73a9ff;
+      --green: #7dd6a7;
+      --pink: #e67aa9;
+      --orange: #eaa45f;
+      --deep: #07080c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--deep);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0) 28%),
+        linear-gradient(120deg, #07080c 0%, #10131a 48%, #090a0f 100%);
+      font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 76px 76px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.82), transparent 82%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 8, 12, 0.8);
+      backdrop-filter: blur(18px);
+    }
+
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .topbar strong {
+      display: block;
+      margin-top: 3px;
+      font-size: 17px;
+    }
+
+    .hero {
+      display: grid;
+      min-height: calc(100vh - 78px);
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+      gap: 48px;
+      align-items: center;
+      padding: 68px 0 54px;
+    }
+
+    h1 {
+      max-width: 820px;
+      margin: 0;
+      font-size: clamp(40px, 6.2vw, 72px);
+      line-height: 1.02;
+      font-weight: 850;
+      text-wrap: balance;
+    }
+
+    .lead {
+      max-width: 780px;
+      margin: 22px 0 0;
+      color: var(--body);
+      font-size: clamp(17px, 2vw, 20px);
+    }
+
+    .thesis {
+      margin-top: 28px;
+      border-left: 3px solid var(--gold);
+      background: rgba(215, 177, 117, 0.1);
+      padding: 16px 18px;
+      color: var(--ink);
+      font-weight: 760;
+    }
+
+    .phone-shot {
+      overflow: hidden;
+      max-height: 660px;
+      border: 1px solid rgba(246, 239, 229, 0.18);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 28px 84px rgba(0, 0, 0, 0.34);
+    }
+
+    .phone-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transform: translateY(-2%);
+    }
+
+    section {
+      padding: 54px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 3.8vw, 42px);
+      line-height: 1.12;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0;
+      color: var(--body);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      min-height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel-soft);
+      padding: 20px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .card .tag {
+      display: inline-flex;
+      margin-bottom: 14px;
+      border: 1px solid rgba(215, 177, 117, 0.42);
+      border-radius: 999px;
+      padding: 4px 10px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .step {
+      min-height: 132px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 16px;
+    }
+
+    .step span {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--body);
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--ink);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .footer {
+      padding: 28px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .cols-4,
+      .cols-2,
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .phone-shot {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div>
+        <div class="label">Growth Operations Case · ZUS Coffee</div>
+        <strong>ZUS Everywhere 新品账号运营</strong>
+      </div>
+      <div class="label">Instagram · Content Matrix · Launch Review</div>
+    </div>
+
+    <section class="hero">
+      <div>
+        <div class="label">New Product Social Operations</div>
+        <h1>把新品账号从发帖执行做成内容增长闭环</h1>
+        <p class="lead">这个项目围绕 ZUS Everywhere 新品账号，目标是在新品阶段建立“随时随地喝到 ZUS”的认知，并通过 Instagram 内容持续验证用户更愿意被哪类场景和表达打动。</p>
+        <div class="thesis">核心判断：新品传播不能只靠单张美图，而要把产品功能、消费场景、生活方式和发布复盘连起来，让账号形成可持续的内容资产。</div>
+      </div>
+      <div class="phone-shot">
+        <img src="../../works/covers/zus-everywhere.jpg" alt="ZUS Everywhere Instagram grid">
+      </div>
+    </section>
+
+    <section>
+      <h2>内容定位</h2>
+      <div class="grid cols-4">
+        <div class="card"><span class="tag">Product</span><h3>产品功能</h3><p>突出包装、饮用方式、口味、便携性和新品卖点，让用户快速知道账号价值。</p></div>
+        <div class="card"><span class="tag">Scene</span><h3>消费场景</h3><p>把产品放进通勤、上班、学习、户外、聚会和节日，降低新品理解成本。</p></div>
+        <div class="card"><span class="tag">Lifestyle</span><h3>生活方式</h3><p>用轻松英文文案、视觉梗和 UGC 式表达，让账号不只是产品货架。</p></div>
+        <div class="card"><span class="tag">Campaign</span><h3>活动节点</h3><p>结合新品发布、节日提醒、限时互动和话题内容，制造持续关注理由。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>执行路径</h2>
+      <p>这个项目的重点是从内容生产走到内容复盘，不把结果停留在“发了多少条”。</p>
+      <div class="flow">
+        <div class="step"><span>01</span><h3>定位调研</h3><p>梳理新品卖点、用户场景和主品牌语气。</p></div>
+        <div class="step"><span>02</span><h3>内容矩阵</h3><p>拆成产品、场景、生活方式、活动节点四类。</p></div>
+        <div class="step"><span>03</span><h3>素材执行</h3><p>参与策划、拍摄协助、剪辑、封面和英文文案。</p></div>
+        <div class="step"><span>04</span><h3>发布排期</h3><p>根据 Instagram grid 和节点节奏安排内容。</p></div>
+        <div class="step"><span>05</span><h3>数据复盘</h3><p>比较触达、互动、保存、评论和关注转化。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>内容实验</h2>
+      <table>
+        <thead><tr><th>方向</th><th>内容动作</th><th>观察指标</th><th>迭代判断</th></tr></thead>
+        <tbody>
+          <tr><td>产品功能</td><td>突出新品杯型、口味、包装和使用方式。</td><td>保存率、评论问题、主页访问。</td><td>用户是否理解产品差异。</td></tr>
+          <tr><td>消费场景</td><td>用上班、学习、户外、节日等真实场景种草。</td><td>互动率、转发、收藏。</td><td>哪个场景最容易触发代入感。</td></tr>
+          <tr><td>生活方式</td><td>使用轻松文案、视觉梗、人物情绪和 UGC 语气。</td><td>评论质量、关注转化。</td><td>账号是否有记忆点和亲近感。</td></tr>
+          <tr><td>活动节点</td><td>围绕新品发布、节日、限时提醒设计内容。</td><td>触达峰值、点击、互动。</td><td>节点内容是否能带来短期拉升。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>复盘闭环</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>选题复盘</h3>
+          <p>按内容类型比较表现，判断产品介绍、场景种草和生活方式内容分别适合承担认知、互动还是关注转化。</p>
+        </div>
+        <div class="card">
+          <h3>视觉复盘</h3>
+          <p>观察封面信息密度、颜色、人物/产品占比和 grid 连续性，保证账号一屏看上去稳定而有记忆点。</p>
+        </div>
+        <div class="card">
+          <h3>文案复盘</h3>
+          <p>测试英文 Hook、轻松语气、互动提问和 CTA，避免新品账号只讲品牌想说的话。</p>
+        </div>
+        <div class="card">
+          <h3>增长复盘</h3>
+          <p>把触达、互动、保存、评论和关注转化放在一起看，判断内容是否真的推动账号增长。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>项目产出</h2>
+      <table>
+        <thead><tr><th>产出</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>内容矩阵</td><td>产品功能、消费场景、生活方式、活动节点四类内容方向。</td></tr>
+          <tr><td>Instagram 内容执行</td><td>完成多轮内容策划、拍摄协助、剪辑、封面和英文文案配合。</td></tr>
+          <tr><td>内容复盘</td><td>输出 15 次以上内容复盘，围绕选题、Hook、封面、互动和关注转化持续优化。</td></tr>
+          <tr><td>增长结果</td><td>账号粉丝增长 1.1 万以上，形成新品账号冷启动阶段的内容资产。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="footer">Created as a growth operations case for ZUS Everywhere new product social operations.</div>
+  </main>
+</body>
+</html>

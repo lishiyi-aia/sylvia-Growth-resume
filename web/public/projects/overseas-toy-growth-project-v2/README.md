@@ -1,26 +1,21 @@
-# 海外潮玩二手交易 App 增长策略研究 V2
+# 海外潮玩二手交易 App 增长策略研究
 
-建议先打开 `portfolio_case_study.html`，它是彩色作品集页面。
+这是一个面向对外展示的增长运营 case study。项目围绕海外潮玩二手交易场景，重点展示如何从市场信号、用户路径、竞品机制和社区痛点中提炼增长策略。
 
-文件说明：
+## 主要文件
 
-- `portfolio_case_study.html`：作品集展示页，适合面试前打开讲项目。
-- `project_narrative.md`：完整研究逻辑和思考过程。
-- `resume_interview_version.md`：简历项目写法 + 60 秒面试讲法 + 高频追问回答。
-- `three_resume_projects.md`：把完整 case study 拆成 3 个简历项目的写法。
-- `target_user_personas.md` / `target_user_personas.csv`：目标用户画像。
-- `content_calendar.csv`：TikTok/Reddit/Discord/Instagram 四周内容计划。
-- `growth_experiment_backlog.csv`：RICE 实验优先级。
-- `referral_campaign.md`：Verified Collector Pass 裂变活动方案。
-- `data_sources.csv`：公开来源与数据口径。
-- `pain_point_coding.csv`：痛点编码表。
-- `kol_scoring_shortlist.csv`：20 个 KOL/KOC 候选池和评分模型。
-- `kpi_framework.csv`：核心指标表。
-- `visuals/`：可单独放进 PPT/作品集的彩色 SVG 图。
+- `portfolio_case_study.html`：完整项目展示页。
+- `project_narrative.md`：项目研究逻辑与策略闭环。
+- `target_user_personas.md`：目标用户画像。
+- `data_sources.csv`：公开来源与用途说明。
+- `pain_point_coding.csv`：用户痛点编码。
+- `content_calendar.csv`：四周内容实验计划。
+- `kol_scoring_shortlist.csv`：KOL/KOC 候选评分模型。
+- `kpi_framework.csv`：AARRR 指标与增长护栏。
+- `growth_experiment_backlog.csv`：增长实验优先级。
+- `referral_campaign.md`：Verified Collector Pass 裂变方案。
+- `visuals/`：项目图表。
 
-使用建议：
+## 项目主线
 
-1. 简历中写「个人项目」或「独立研究项目」，不要包装成已上线业务结果。
-2. 面试时先讲假设变化：从 traffic-led growth 到 trust-led growth。
-3. 如果面试官追问数据，直接打开 `data_sources.csv` 和 `pain_point_coding.csv` 解释来源。
-4. 如果面试官追问 KOL，讲评分模型和小预算实验闭环，不要只说「找达人发帖」。
+核心判断不是“海外潮玩用户没有兴趣”，而是“用户有兴趣，但缺少可信交易理由”。因此增长策略从 traffic-led growth 调整为 trust-led growth：先把真假鉴定、卖家信用、价格透明和受保护支付前置，再用内容和社群放大。

@@ -1,4 +1,4 @@
-// 作品集数据（双语）。5 大板块 → 点击展开作品详情。
+// 项目数据（双语）。各板块 → 点击展开项目详情。
 // 纯数据驱动：增删板块 / 作品只改本文件，Works.jsx 仅负责渲染。
 //
 // 板块字段：
@@ -75,10 +75,10 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             meta: 'Overseas Designer Toy Resale App Growth Strategy',
             slug: 'overseas-toy-growth',
             tags: [
-              '基于公开来源完成海外潮玩交易市场、竞品与社区痛点研究',
-              '用 Trust Barrier Model 将增长问题从流量不足重构为交易信任不足',
-              '设计 TikTok、Reddit、Discord 内容实验与 KOL/KOC 合作模型',
-              '输出 AARRR 指标、RICE 实验优先级与 Verified Collector Pass 裂变方案',
+              '从内容流量假设切入，重构为交易信任驱动的增长问题',
+              '完成用户路径、竞品定位、信任阻碍热力图和渠道角色分析',
+              '规划 TikTok / Reddit / Discord 内容实验与 KOL/KOC 评分模型',
+              '用 AARRR、RICE 与纠纷率护栏形成增长复盘闭环',
             ],
           },
         ],
@@ -90,14 +90,14 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
         tagline: '新品运营｜多源数据整合｜用户路径诊断｜运营决策',
         items: [
           {
-            name: 'AI资讯追踪App运营分析与问题归因面板',
+            name: 'AI资讯追踪 App 运营分析与问题归因面板',
             meta: 'AI Information Tracking App Operations Dashboard',
             slug: 'ai-news-dashboard',
             tags: [
-              '整合用户路径、行为埋点、问卷反馈与核心指标日报',
-              'Funnel、Activation、Segments与Cross Analysis',
-              '数据质量检查、敏感信息保护与问题归因',
-              '从用户流失节点定位到产品运营优化建议',
+              '承接 YouNews 用户路径工具，整合埋点、问卷和日报指标',
+              '定位注册后首次核心体验前的流失节点与功能理解问题',
+              '搭建 Funnel、Activation、Segments、Cross Analysis 诊断框架',
+              '沉淀内容教育、产品入口优化和留存提醒三类动作',
             ],
           },
         ],
@@ -109,14 +109,14 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
         tagline: '新品传播｜Instagram内容策略｜增长复盘',
         items: [
           {
-            name: 'ZUS Coffee / ZUS Everywhere新品账号运营',
+            name: 'ZUS Coffee / ZUS Everywhere 新品账号运营',
             meta: 'ZUS Everywhere New Product Social Operations',
             slug: 'zus-everywhere',
             tags: [
-              '新品内容调研、用户偏好分析与社媒卖点提炼',
-              '完成50条Instagram内容的策划、拍摄、剪辑与英文文案',
-              '测试产品功能、消费场景与生活方式等内容方向',
-              '输出15次以上内容复盘，推动账号粉丝增长1.1万以上',
+              '围绕 ZUS Everywhere 新品账号完成内容定位与发布节奏规划',
+              '构建产品功能、消费场景、生活方式和活动节点内容矩阵',
+              '通过 Instagram 数据复盘优化选题、封面、Hook 与英文文案',
+              '形成从新品认知、内容互动到关注转化的账号冷启动闭环',
             ],
           },
         ],
@@ -147,9 +147,9 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             slug: 'overseas-toy-growth',
             tags: [
               'Built a market, competitor, and community pain-point study from public sources',
-              'Reframed the growth challenge from traffic-led growth to trust-led conversion',
+              'Reframed the challenge from traffic acquisition to trust-led conversion',
               'Designed TikTok, Reddit, Discord, and KOL/KOC growth experiments',
-              'Delivered an AARRR KPI map, RICE backlog, and Verified Collector Pass referral plan',
+              'Connected AARRR, RICE prioritization, and dispute-rate guardrails into a review loop',
             ],
           },
         ],
@@ -165,10 +165,10 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             meta: 'AI资讯追踪App运营分析与问题归因面板',
             slug: 'ai-news-dashboard',
             tags: [
-              'Integrated user journey, event tracking, survey feedback, and KPI reporting',
-              'Funnel, activation, segmentation, and cross-analysis',
-              'Data quality checks, sensitive information protection, and issue attribution',
-              'From churn point diagnosis to product and operations optimization suggestions',
+              'Turned YouNews user-path data into an operations diagnosis console',
+              'Identified drop-off before first core experience and feature understanding gaps',
+              'Built funnel, activation, segmentation, and cross-analysis modules',
+              'Converted diagnosis into content education, product entry, and retention actions',
             ],
           },
         ],
@@ -185,9 +185,9 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             slug: 'zus-everywhere',
             tags: [
               'Research on product content, user preferences, and social media positioning',
-              'Planned, shot, edited, and wrote English copy for 50 Instagram posts',
-              'Tested product features, consumption scenarios, and lifestyle content directions',
-              'Delivered 15+ content reviews and drove over 11,000 new followers',
+              'Built content pillars across product features, usage scenes, lifestyle, and campaigns',
+              'Used Instagram reviews to improve topics, covers, hooks, and English captions',
+              'Created a cold-start loop from product awareness to engagement and follows',
             ],
           },
         ],

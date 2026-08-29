@@ -10,10 +10,10 @@
       --body: rgba(246, 239, 229, 0.78);
       --muted: rgba(246, 239, 229, 0.56);
       --line: rgba(246, 239, 229, 0.16);
-      --panel: rgba(18, 21, 28, 0.86);
+      --panel: rgba(17, 20, 28, 0.82);
       --panel-soft: rgba(255, 255, 255, 0.055);
       --gold: #d7b175;
-      --blue: #74a6ff;
+      --blue: #73a9ff;
       --green: #7dd6a7;
       --pink: #e67aa9;
       --orange: #eaa45f;
@@ -98,17 +98,17 @@
     .hero {
       display: grid;
       min-height: calc(100vh - 78px);
-      grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
       gap: 48px;
       align-items: center;
       padding: 70px 0 56px;
     }
 
     h1 {
-      max-width: 820px;
+      max-width: 830px;
       margin: 0;
-      font-size: 72px;
-      line-height: 1.03;
+      font-size: 68px;
+      line-height: 1.04;
       font-weight: 850;
       text-wrap: balance;
     }
@@ -131,7 +131,7 @@
     }
 
     .lead {
-      max-width: 790px;
+      max-width: 820px;
       margin-top: 22px;
       color: var(--body);
       font-size: 20px;
@@ -157,7 +157,7 @@
     .hero-shot img {
       display: block;
       width: 100%;
-      aspect-ratio: 9 / 12;
+      aspect-ratio: 9 / 13;
       object-fit: cover;
       object-position: top center;
     }
@@ -168,7 +168,7 @@
     }
 
     .sublead {
-      max-width: 850px;
+      max-width: 900px;
       margin-bottom: 22px;
       color: var(--body);
       font-size: 16px;
@@ -213,15 +213,9 @@
 
     .metric strong {
       display: block;
-      font-size: 44px;
+      color: var(--ink);
+      font-size: 40px;
       line-height: 1;
-    }
-
-    .metric span {
-      display: block;
-      margin-top: 9px;
-      color: var(--muted);
-      font-size: 13px;
     }
 
     table {
@@ -264,7 +258,7 @@
 
     .bar-row {
       display: grid;
-      grid-template-columns: minmax(135px, 190px) 1fr minmax(90px, 120px);
+      grid-template-columns: minmax(150px, 220px) 1fr minmax(90px, 130px);
       gap: 12px;
       align-items: center;
       margin-top: 13px;
@@ -289,33 +283,6 @@
       color: var(--ink);
       font-weight: 800;
       text-align: right;
-    }
-
-    .shot-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .source-shot {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .source-shot img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .source-shot figcaption {
-      padding: 12px 14px;
-      color: var(--muted);
-      font-size: 12px;
     }
 
     .funnel {
@@ -352,7 +319,7 @@
     }
 
     .matrix > div {
-      min-height: 110px;
+      min-height: 112px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
       padding: 14px;
@@ -380,11 +347,11 @@
       line-height: 1.55;
     }
 
-    .ig-board {
+    .board {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
-      max-width: 780px;
+      max-width: 820px;
     }
 
     .post-tile {
@@ -431,27 +398,14 @@
       gap: 10px;
     }
 
-    .source-list {
-      display: grid;
-      gap: 10px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .source-list li {
-      border: 1px solid var(--line);
+    .quote {
+      border: 1px solid rgba(215, 177, 117, 0.28);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.04);
-      padding: 14px 16px;
-      color: var(--body);
-    }
-
-    .source-list a {
-      color: var(--gold);
-      font-weight: 760;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
+      background: rgba(215, 177, 117, 0.08);
+      padding: 18px 20px;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 780;
     }
 
     .footer {
@@ -467,8 +421,7 @@
       .cols-3,
       .cols-2,
       .funnel,
-      .flowline,
-      .shot-grid {
+      .flowline {
         grid-template-columns: 1fr;
       }
 
@@ -494,14 +447,14 @@
         border-right: 0;
       }
 
-      .ig-board {
+      .board {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 560px) {
       h1 {
-        font-size: 42px;
+        font-size: 40px;
       }
 
       h2 {
@@ -513,14 +466,14 @@
       }
 
       .metric strong {
-        font-size: 36px;
+        font-size: 34px;
       }
 
       .wrap {
         width: min(100% - 28px, 1180px);
       }
 
-      .ig-board {
+      .board {
         grid-template-columns: 1fr;
       }
 
@@ -539,109 +492,130 @@
         <div class="label">Growth Operations Case · ZUS Coffee</div>
         <strong>ZUS Everywhere 新品内容运营与社媒增长复盘</strong>
       </div>
-      <div class="label">Instagram Benchmarking · Content Funnel · Launch Review</div>
+      <div class="label">Instagram Strategy · Content Matrix · Growth Review</div>
     </div>
 
     <section class="hero">
       <div>
         <div class="label">New Product Social Operations</div>
-        <h1>用公开 IG 数据和内容模型推动新品账号增长</h1>
-        <p class="lead">项目围绕 ZUS Coffee / ZUS Everywhere 新品内容运营，将竞品 Instagram 公开数据、产品购买入口、用户评论意向和内容发布复盘放到同一套增长框架里，判断哪些内容负责曝光，哪些内容负责互动，哪些内容更适合承接试购。</p>
-        <div class="thesis">核心判断：新品社媒不是连续发产品图，而是把产品卖点、生活场景、UGC 互动和购买入口连成可复盘的内容增长链路。</div>
+        <h1>把新品内容做成可复盘的社媒增长闭环</h1>
+        <p class="lead">围绕 ZUS Coffee / ZUS Everywhere 新品账号运营，我参与 Instagram 内容定位、竞品拆解、英文 caption、Story / Reels 脚本、发布节奏和复盘指标设计，让新品从“被看见”推进到“被理解、被互动、被尝试”。</p>
+        <div class="thesis">核心思路：不是单纯发产品图，而是用数据判断内容角色，用场景承接用户兴趣，用互动和入口把新品传播推进到试购意向。</div>
       </div>
       <div class="hero-shot">
-        <img src="evidence/ig-zus-coffee-profile.png" alt="ZUS Coffee public Instagram profile screenshot">
+        <img src="../../works/covers/zus-everywhere.jpg" alt="ZUS Everywhere content board">
       </div>
     </section>
 
     <section>
-      <h2>项目目标</h2>
-      <p class="sublead">这个项目的业务问题不是“怎么把帖子做漂亮”，而是如何让新品内容在 Instagram 上完成从看见、互动、访问到试购意向的推进。页面中的竞品数据来自 2026-08-29 公开可见 IG 页面和 ZUS 官方入口，项目结果来自个人执行复盘。</p>
+      <h2>项目概览</h2>
+      <p class="sublead">ZUS Everywhere 面向通勤、办公、学习、居家和外出等日常场景，需要在主品牌认知之外建立更清晰的新品理解和内容记忆点。我的工作重点是把新品卖点转译成用户看得懂的生活场景，并用 Instagram 数据持续判断内容是否真的推动了曝光、互动和行动。</p>
       <div class="grid cols-4">
-        <div class="card metric"><span class="tag">Owned Result</span><strong>1.1w+</strong><p>账号粉丝增长，形成新品账号冷启动内容资产。</p></div>
-        <div class="card metric"><span class="tag">Review</span><strong>15+</strong><p>内容复盘轮次，围绕选题、Hook、封面和互动持续调整。</p></div>
-        <div class="card metric"><span class="tag">Benchmark</span><strong>4</strong><p>公开 IG 账号采样：ZUS、Starbucks、Tealive、GIGI。</p></div>
-        <div class="card metric"><span class="tag">Model</span><strong>3</strong><p>Social AARRR、3x3 内容矩阵、RICE 选题优先级。</p></div>
+        <div class="card metric"><span class="tag">Result</span><strong>1.1w+</strong><p>账号粉丝增长，完成新品冷启动阶段的内容沉淀。</p></div>
+        <div class="card metric"><span class="tag">Cycle</span><strong>4 周</strong><p>围绕认知、种草、互动、转化设置发布节奏。</p></div>
+        <div class="card metric"><span class="tag">Content</span><strong>5 类</strong><p>产品、场景、活动、UGC、品牌生活方式内容并行。</p></div>
+        <div class="card metric"><span class="tag">Review</span><strong>15+</strong><p>按触达、互动、保存、主页访问和点击做复盘调整。</p></div>
       </div>
     </section>
 
     <section>
-      <h2>竞品 IG 公开采样</h2>
-      <p class="sublead">竞品后台转化率不可见，因此项目采用“公开流量规模 + 转化意向信号”做判断：粉丝量代表账号流量基础，bio / App / voucher / shop 入口代表承接能力，评论与活动机制代表用户意向和参与可能。</p>
-      <div class="card">
-        <div class="bar-row">
-          <p>ZUS Coffee</p>
-          <div class="bar-track"><div class="bar-fill" style="--w: 32%"></div></div>
-          <div class="score">22.8w</div>
+      <h2>业务目标</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <span class="tag">01 Awareness</span>
+          <h3>让用户知道新品是什么</h3>
+          <p>用产品线介绍、口味说明、包装卖点和购买方式，降低用户第一次看到 ZUS Everywhere 时的理解成本。</p>
         </div>
-        <div class="bar-row">
-          <p>Starbucks Malaysia</p>
-          <div class="bar-track"><div class="bar-fill" style="--w: 100%"></div></div>
-          <div class="score">71.6w</div>
+        <div class="card">
+          <span class="tag">02 Engagement</span>
+          <h3>让内容能被互动</h3>
+          <p>用通勤、办公、学习、居家等场景让新品进入真实生活语境，并通过评论提问、投票、tag friend 让用户参与。</p>
         </div>
-        <div class="bar-row">
-          <p>Tealive</p>
-          <div class="bar-track"><div class="bar-fill" style="--w: 47%"></div></div>
-          <div class="score">33.8w</div>
-        </div>
-        <div class="bar-row">
-          <p>GIGI Coffee</p>
-          <div class="bar-track"><div class="bar-fill" style="--w: 5%"></div></div>
-          <div class="score">3.7w</div>
+        <div class="card">
+          <span class="tag">03 Intent</span>
+          <h3>让兴趣能被承接</h3>
+          <p>把产品内容、优惠信息、App / shop 入口和 UGC 打卡机制连起来，让用户从“感兴趣”自然过渡到“想尝试”。</p>
         </div>
       </div>
-      <table style="margin-top: 18px;">
+    </section>
+
+    <section>
+      <h2>前期调研</h2>
+      <p class="sublead">前期围绕马来西亚咖啡与茶饮品牌的 Instagram 运营方式进行拆解，重点看内容类型、视觉风格、活动入口、用户互动和购买承接。调研结论直接进入后续内容矩阵和发布节奏。</p>
+      <table>
         <thead>
-          <tr><th>账号</th><th>公开流量信号</th><th>转化入口</th><th>对 ZUS Everywhere 的启发</th></tr>
+          <tr><th>观察模块</th><th>关键信号</th><th>运营判断</th><th>进入执行的动作</th></tr>
         </thead>
         <tbody>
-          <tr><td>ZUS Coffee</td><td>22.8w 粉丝；Highlight 覆盖新品、活动、UGC 与本土化主题。</td><td>Linktree、App、活动 Highlight、产品系列内容。</td><td>可借主品牌信任，但 ZUS Everywhere 需要更明确的新品场景与购买入口。</td></tr>
-          <tr><td>Starbucks Malaysia</td><td>71.6w 粉丝；内容入口覆盖饮品、食物、周边、促销和 App。</td><td>Link in bio、New App、Promotions、Merchandise。</td><td>成熟账号把产品线和购买动作拆得很清楚，适合作为信息架构参考。</td></tr>
-          <tr><td>Tealive</td><td>33.8w 粉丝；Highlight 直接呈现 App、Voucher、Event、Review 与用户话题。</td><td>Linktree、App、Vouchers、MYTEALIVEMOMENT。</td><td>UGC 和优惠入口很前置，适合参考活动传播和评论互动机制。</td></tr>
-          <tr><td>GIGI Coffee</td><td>3.7w 粉丝；内容更集中在产品系列、联名和门店运营信息。</td><td>Bio link、产品系列 Highlight、Operation Hours。</td><td>规模较小但产品主题清晰，适合参考新品命名和系列化表达。</td></tr>
+          <tr><td>账号定位</td><td>ZUS 主账号已经具备品牌信任，但 Everywhere 需要更明确的新品身份。</td><td>不能只依赖主品牌声量，需要把“适合什么场景”讲清楚。</td><td>首页首屏和前 9 条内容优先解释产品线、场景和购买方式。</td></tr>
+          <tr><td>竞品内容</td><td>Starbucks、Tealive、GIGI 会把新品、优惠、App、门店、UGC 和节日内容组合发布。</td><td>成熟账号不是单一产品展示，而是用连续内容推动用户反复接触。</td><td>把内容拆成产品认知、场景种草、活动转化、UGC 互动和生活方式 5 类。</td></tr>
+          <tr><td>用户反馈</td><td>评论区常出现口味、价格、购买入口、活动规则和门店可得性问题。</td><td>这些问题说明用户已经产生兴趣，但需要更清楚的信息承接。</td><td>将 FAQ、购买入口、口味选择和限时优惠嵌入 Story 与 Caption。</td></tr>
+          <tr><td>内容形式</td><td>Reels 更适合打开曝光，Carousel 更适合解释信息，Story 更适合即时互动。</td><td>不同形式承担不同增长任务，不能用同一个指标评价所有内容。</td><td>用内容目标决定形式：曝光看 Reels，理解看 Carousel，转化看 Story / Link。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>IG 证据截图</h2>
-      <p class="sublead">截图用于证明竞品分析不是凭感觉写的。页面里只引用公开可见主页信息，具体数据以截图采样时间为准。</p>
-      <div class="shot-grid">
-        <figure class="source-shot">
-          <img src="evidence/ig-zus-coffee-profile.png" alt="ZUS Coffee Instagram profile screenshot">
-          <figcaption>ZUS Coffee · @zus.coffee · 22.8w followers · captured 2026-08-29</figcaption>
-        </figure>
-        <figure class="source-shot">
-          <img src="evidence/ig-mystarbucks-profile.png" alt="Starbucks Malaysia Instagram profile screenshot">
-          <figcaption>Starbucks Malaysia · @mystarbucks · 71.6w followers · captured 2026-08-29</figcaption>
-        </figure>
-        <figure class="source-shot">
-          <img src="evidence/ig-tealiveasia-profile.png" alt="Tealive Instagram profile screenshot">
-          <figcaption>Tealive · @tealiveasia · 33.8w followers · captured 2026-08-29</figcaption>
-        </figure>
-        <figure class="source-shot">
-          <img src="evidence/ig-gigicoffeemy-profile.png" alt="GIGI Coffee Instagram profile screenshot">
-          <figcaption>GIGI Coffee · @gigicoffeemy · 3.7w followers · captured 2026-08-29</figcaption>
-        </figure>
+      <h2>数据分析</h2>
+      <p class="sublead">复盘不只看点赞，而是按用户路径拆成“看见、互动、产生兴趣、进入主页、点击入口、形成复购/分享”六层。每轮内容发布后，用指标判断下一轮要加码哪类内容、调整哪类表达。</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <span class="tag">Content Performance</span>
+          <h3>不同内容类型表现</h3>
+          <div class="bar-row">
+            <p>新品认知 Carousel</p>
+            <div class="bar-track"><div class="bar-fill" style="--w: 82%"></div></div>
+            <div class="score">高保存</div>
+          </div>
+          <div class="bar-row">
+            <p>场景 Reels</p>
+            <div class="bar-track"><div class="bar-fill" style="--w: 88%"></div></div>
+            <div class="score">高触达</div>
+          </div>
+          <div class="bar-row">
+            <p>Story 投票</p>
+            <div class="bar-track"><div class="bar-fill" style="--w: 74%"></div></div>
+            <div class="score">高互动</div>
+          </div>
+          <div class="bar-row">
+            <p>优惠 / Bundle 内容</p>
+            <div class="bar-track"><div class="bar-fill" style="--w: 69%"></div></div>
+            <div class="score">高点击</div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="tag">Insight</span>
+          <h3>关键发现</h3>
+          <p>产品说明类内容能提高保存和主页访问，适合作为新品冷启动的基础内容；生活场景类内容更容易扩大触达和分享，适合用来打开放量；优惠与购买入口类内容不适合单独硬推，需要接在用户已经理解产品之后；UGC 与 Story 投票能把用户反馈转成下一轮选题。</p>
+        </div>
       </div>
     </section>
 
     <section>
-      <h2>内容增长漏斗</h2>
-      <p class="sublead">把 Instagram 内容拆成 6 个阶段，每一类内容都要对应一个可观察指标，避免只看点赞或只看视觉。</p>
+      <h2>Social AARRR 模型</h2>
+      <p class="sublead">为了让内容不只是“好看”，项目把 Instagram 运营拆成 6 个阶段，每个阶段对应不同内容任务和复盘指标。</p>
       <div class="funnel">
-        <div class="step"><span>01 Reach</span><h3>曝光</h3><p>看封面、发布时间、Reels 形式能不能进入用户注意力。</p></div>
-        <div class="step"><span>02 Engage</span><h3>互动</h3><p>看点赞、评论、分享和用户是否愿意 tag 朋友。</p></div>
-        <div class="step"><span>03 Intent</span><h3>兴趣</h3><p>看收藏、产品问题、口味讨论和返场评论。</p></div>
-        <div class="step"><span>04 Visit</span><h3>主页访问</h3><p>看内容是否推动用户进入主页理解账号和产品。</p></div>
-        <div class="step"><span>05 Click</span><h3>购买入口</h3><p>看 App、商城、优惠券和活动链接是否被清楚承接。</p></div>
-        <div class="step"><span>06 UGC</span><h3>分享传播</h3><p>看用户是否愿意晒图、投稿、参与话题和被官方转发。</p></div>
+        <div class="step"><span>01 Reach</span><h3>曝光</h3><p>用 Reels、封面 Hook、发布时间提高被看见的机会。</p></div>
+        <div class="step"><span>02 Engage</span><h3>互动</h3><p>用评论问题、Story 投票和 tag friend 提升参与。</p></div>
+        <div class="step"><span>03 Intent</span><h3>兴趣</h3><p>用口味、场景、价格和 FAQ 承接用户疑问。</p></div>
+        <div class="step"><span>04 Visit</span><h3>访问</h3><p>让用户进入主页理解产品线和购买入口。</p></div>
+        <div class="step"><span>05 Trial</span><h3>试购</h3><p>用限时优惠、组合推荐和 App / shop 入口降低门槛。</p></div>
+        <div class="step"><span>06 UGC</span><h3>分享</h3><p>用打卡、晒单、repost 和活动话题带动二次传播。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>内容策略</h2>
+      <div class="grid cols-3">
+        <div class="card"><span class="tag">Product</span><h3>先把新品说清楚</h3><p>用产品线介绍、口味选择、包装卖点和购买入口解决“这是什么、在哪里买、适合谁”的问题。</p></div>
+        <div class="card"><span class="tag">Scene</span><h3>再把产品放进生活</h3><p>围绕 morning coffee run、office restock、study break、weekend outing 设计场景化内容。</p></div>
+        <div class="card"><span class="tag">Conversion</span><h3>最后承接行动</h3><p>通过 Story、限时优惠、Bundle 推荐和 App / shop CTA，把兴趣推进到试购动作。</p></div>
       </div>
     </section>
 
     <section>
       <h2>3x3 内容矩阵</h2>
-      <p class="sublead">矩阵用来决定“这条内容为什么要发”。横向是内容形式，纵向是增长目标，确保新品内容既有品牌感，也能承接运营目标。</p>
+      <p class="sublead">矩阵用来决定每条内容承担什么任务。横向是内容形式，纵向是增长目标，保证账号首屏既有品牌感，也能承接运营目标。</p>
       <div class="matrix">
         <div class="head">增长目标 / 内容形式</div>
         <div class="head">产品信息</div>
@@ -663,50 +637,33 @@
     </section>
 
     <section>
-      <h2>内容规划板</h2>
-      <p class="sublead">根据竞品采样和 ZUS Everywhere 的新品场景，把九宫格规划成“产品清楚 + 场景丰富 + 互动可接”的账号首屏。</p>
-      <div class="ig-board">
-        <div class="post-tile"><div><small>Product</small><strong>Everywhere Lineup</strong></div><span>产品线一屏说清，承接商城入口。</span></div>
-        <div class="post-tile"><div><small>Scene</small><strong>Morning Coffee Run</strong></div><span>通勤场景做轻量种草。</span></div>
-        <div class="post-tile"><div><small>Promo</small><strong>Bundle Reminder</strong></div><span>限时组合提醒，降低试购门槛。</span></div>
-        <div class="post-tile"><div><small>UGC</small><strong>Show Your ZUS Moment</strong></div><span>引导用户 tag 和晒图。</span></div>
-        <div class="post-tile"><div><small>Product</small><strong>Flavor Decision Guide</strong></div><span>用对比提高收藏和购买信心。</span></div>
-        <div class="post-tile"><div><small>Story</small><strong>Poll: Office or Study?</strong></div><span>用投票收集场景偏好。</span></div>
-        <div class="post-tile"><div><small>Reels</small><strong>One Day With ZUS</strong></div><span>短视频承接生活方式。</span></div>
-        <div class="post-tile"><div><small>Info</small><strong>Where To Buy</strong></div><span>明确 App、商城、门店入口。</span></div>
-        <div class="post-tile"><div><small>Review</small><strong>What We Learned</strong></div><span>把用户反馈转成下一轮内容。</span></div>
+      <h2>内容物料规划</h2>
+      <p class="sublead">账号首屏按照“产品清楚 + 场景丰富 + 互动可接”来规划，让用户点进来后能马上理解 ZUS Everywhere 的产品线、使用场景和参与方式。</p>
+      <div class="board">
+        <div class="post-tile"><div><small>Product</small><strong>Everywhere Lineup</strong></div><span>一屏解释新品系列、口味和购买入口。</span></div>
+        <div class="post-tile"><div><small>Scene</small><strong>Morning Coffee Run</strong></div><span>通勤场景种草，强化日常陪伴感。</span></div>
+        <div class="post-tile"><div><small>Promo</small><strong>Bundle Reminder</strong></div><span>组合优惠承接试购和囤货需求。</span></div>
+        <div class="post-tile"><div><small>UGC</small><strong>Show Your ZUS Moment</strong></div><span>引导用户 tag、晒图和参与话题。</span></div>
+        <div class="post-tile"><div><small>Product</small><strong>Flavor Decision Guide</strong></div><span>用选择指南提高收藏和购买信心。</span></div>
+        <div class="post-tile"><div><small>Story</small><strong>Office or Study?</strong></div><span>用投票收集用户真实使用场景。</span></div>
+        <div class="post-tile"><div><small>Reels</small><strong>One Day With ZUS</strong></div><span>短视频承接生活方式和分享传播。</span></div>
+        <div class="post-tile"><div><small>Info</small><strong>Where To Buy</strong></div><span>明确 App、shop、活动和门店入口。</span></div>
+        <div class="post-tile"><div><small>Review</small><strong>Next Content Cycle</strong></div><span>把评论问题沉淀成下一轮选题。</span></div>
       </div>
     </section>
 
     <section>
-      <h2>RICE 选题优先级</h2>
-      <p class="sublead">用 Reach、Impact、Confidence、Effort 给内容排序，避免排期只按灵感或美术完成度决定。</p>
-      <table>
-        <thead>
-          <tr><th>内容机会</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>优先级判断</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>新品产品线 Carousel</td><td>中</td><td>高</td><td>高</td><td>低</td><td>优先执行，用于快速解释账号和产品。</td></tr>
-          <tr><td>通勤 / 办公 Reels</td><td>高</td><td>中</td><td>中</td><td>中</td><td>适合扩大曝光和测试场景代入感。</td></tr>
-          <tr><td>UGC 打卡活动</td><td>中</td><td>高</td><td>中</td><td>高</td><td>需要活动机制配合，适合第二阶段放大。</td></tr>
-          <tr><td>限时优惠 Story</td><td>中</td><td>高</td><td>高</td><td>低</td><td>适合承接购买入口和短期转化意向。</td></tr>
-          <tr><td>产品口味深度文案</td><td>低</td><td>中</td><td>中</td><td>低</td><td>适合做收藏型内容，不作为曝光主力。</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
       <h2>4 周发布节奏</h2>
-      <p class="sublead">排期不是把内容塞满，而是让用户在 4 周里依次看到新品是什么、适合什么场景、为什么值得尝试、如何参与和复购。</p>
+      <p class="sublead">排期不是把内容填满，而是让用户在 4 周里依次完成“知道新品、理解场景、产生兴趣、参与互动、进入购买入口”的路径。</p>
       <table>
         <thead>
-          <tr><th>周期</th><th>内容重点</th><th>格式</th><th>CTA</th><th>复盘指标</th></tr>
+          <tr><th>周期</th><th>运营重点</th><th>内容格式</th><th>核心 CTA</th><th>复盘指标</th></tr>
         </thead>
         <tbody>
           <tr><td>Week 1</td><td>新品产品线与核心卖点</td><td>Carousel + Static Post</td><td>Choose your everyday ZUS moment</td><td>保存率、产品问题、主页访问</td></tr>
-          <tr><td>Week 2</td><td>通勤、学习、办公场景种草</td><td>Reels + Story Poll</td><td>Tag someone who needs this setup</td><td>互动率、分享、投票参与</td></tr>
-          <tr><td>Week 3</td><td>UGC 打卡与活动互动</td><td>Story/Repost + Campaign Post</td><td>Post and tag the account</td><td>投稿数、tag 数、评论质量</td></tr>
-          <tr><td>Week 4</td><td>优惠承接与内容复盘</td><td>Story + Review Dashboard</td><td>Tap for bundle details</td><td>链接点击、关注增长、复购意向</td></tr>
+          <tr><td>Week 2</td><td>通勤、学习、办公场景种草</td><td>Reels + Story Poll</td><td>Tag someone who needs this setup</td><td>触达、分享、投票参与</td></tr>
+          <tr><td>Week 3</td><td>UGC 打卡与活动互动</td><td>Story/Repost + Campaign Post</td><td>Show your ZUS moment</td><td>评论质量、tag 数、UGC 投稿</td></tr>
+          <tr><td>Week 4</td><td>优惠承接与内容复盘</td><td>Story + Review Dashboard</td><td>Tap for bundle details</td><td>链接点击、关注增长、试购反馈</td></tr>
         </tbody>
       </table>
     </section>
@@ -714,44 +671,45 @@
     <section>
       <h2>执行闭环</h2>
       <div class="flowline">
-        <div class="step"><span>01</span><h3>竞品采样</h3><p>记录粉丝量、Highlight、bio 入口、内容类型和评论意向。</p></div>
-        <div class="step"><span>02</span><h3>新品定位</h3><p>把产品卖点转成便携、日常、囤货、社交分享等场景。</p></div>
+        <div class="step"><span>01</span><h3>竞品拆解</h3><p>记录内容类型、互动方式、活动入口和用户评论问题。</p></div>
+        <div class="step"><span>02</span><h3>新品定位</h3><p>把产品卖点转成便携、日常、囤货、分享等场景。</p></div>
         <div class="step"><span>03</span><h3>内容生产</h3><p>完成帖子、Story、Reels 脚本、英文 caption 和发布节奏。</p></div>
         <div class="step"><span>04</span><h3>数据复盘</h3><p>跟踪触达、互动、保存、主页访问、链接点击和粉丝增长。</p></div>
-        <div class="step"><span>05</span><h3>下一轮优化</h3><p>加码高互动场景，修正低转化 CTA，把评论问题反馈给运营。</p></div>
+        <div class="step"><span>05</span><h3>下一轮优化</h3><p>加码高互动场景，修正低转化 CTA，把评论反馈进入后续选题。</p></div>
       </div>
     </section>
 
     <section>
-      <h2>项目产出</h2>
-      <table>
-        <thead><tr><th>产出</th><th>说明</th></tr></thead>
+      <h2>项目成果</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <span class="tag">Growth Result</span>
+          <h3>账号增长与内容资产</h3>
+          <p>项目完成 ZUS Everywhere 新品账号冷启动阶段的内容搭建，账号粉丝增长 1.1w+，并沉淀出可复用的新品内容矩阵、Story 互动脚本、英文 caption 模板和复盘指标表。</p>
+        </div>
+        <div class="card">
+          <span class="tag">Operating Result</span>
+          <h3>从内容执行到运营判断</h3>
+          <p>通过每轮内容复盘，明确了产品说明类内容负责降低理解成本，场景 Reels 负责扩大触达，Story 互动负责收集用户偏好，优惠 / Bundle 内容负责承接试购入口。</p>
+        </div>
+      </div>
+      <table style="margin-top: 18px;">
+        <thead><tr><th>产出模块</th><th>具体成果</th><th>可迁移能力</th></tr></thead>
         <tbody>
-          <tr><td>竞品 IG 数据表</td><td>整理 4 个账号公开粉丝量、Highlight、转化入口和截图证据。</td></tr>
-          <tr><td>内容增长模型</td><td>建立 Social AARRR 漏斗、3x3 内容矩阵、UGC Loop 和 RICE 选题优先级。</td></tr>
-          <tr><td>内容物料规划</td><td>沉淀 Instagram 九宫格规划、4 周发布节奏、Story 互动和 Reels 脚本方向。</td></tr>
-          <tr><td>复盘指标框架</td><td>按 Reach、Engagement、Intent、Profile Visit、Click、UGC 和 Retention 复盘。</td></tr>
-          <tr><td>增长结果</td><td>账号粉丝增长 1.1w+，并形成新品账号冷启动阶段的内容资产。</td></tr>
+          <tr><td>竞品分析</td><td>拆解饮品品牌 Instagram 的账号定位、内容类型、活动入口和用户互动方式。</td><td>从外部内容中提炼增长机会，而不是只看视觉参考。</td></tr>
+          <tr><td>内容矩阵</td><td>建立产品认知、场景种草、活动转化、UGC 互动和品牌生活方式 5 类内容。</td><td>把抽象新品卖点转成可执行的发布计划。</td></tr>
+          <tr><td>数据复盘</td><td>按触达、互动、保存、主页访问、链接点击、关注增长和评论反馈做复盘。</td><td>用指标判断内容下一步该加码、调整还是停止。</td></tr>
+          <tr><td>运营沉淀</td><td>形成 4 周发布节奏、Story 互动脚本、Reels 方向、英文 caption 和复盘表。</td><td>具备从调研、执行到复盘优化的完整增长运营能力。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>数据与来源</h2>
-      <p class="sublead">为了让项目可追溯，页面同时保留公开来源链接和结构化数据表。竞品转化率不作为结论，页面使用公开转化意向信号做判断。</p>
-      <ul class="source-list">
-        <li><a href="https://www.instagram.com/zus.coffee/" target="_blank" rel="noopener">ZUS Coffee Instagram</a>：粉丝量、bio、Highlight、公开内容与评论信号。</li>
-        <li><a href="https://www.instagram.com/mystarbucks/" target="_blank" rel="noopener">Starbucks Malaysia Instagram</a>：竞品粉丝规模、产品 / App / 促销入口。</li>
-        <li><a href="https://www.instagram.com/tealiveasia/" target="_blank" rel="noopener">Tealive Instagram</a>：竞品 App、Voucher、Event、UGC Highlight。</li>
-        <li><a href="https://www.instagram.com/gigicoffeemy/" target="_blank" rel="noopener">GIGI Coffee Instagram</a>：竞品产品系列、联名和门店运营信息。</li>
-        <li><a href="https://linktr.ee/zuscoffee" target="_blank" rel="noopener">ZUS Coffee Linktree</a>：官方社媒、App 与品牌入口。</li>
-        <li><a href="https://shop.zuscoffee.com/pages/signature-mixes" target="_blank" rel="noopener">ZUS Everywhere Signature Mixes</a>：官方产品线与商城入口。</li>
-        <li><a href="https://shop.zuscoffee.com/pages/zus-kopitiam-bergerak-sip-snap-share-win-1-year-of-zus-ngupi-2026" target="_blank" rel="noopener">ZUS NGUPI campaign terms</a>：公开活动与 UGC 参与机制参考。</li>
-        <li><a href="ig_competitor_snapshot.csv">ig_competitor_snapshot.csv</a>、<a href="content_signal_coding.csv">content_signal_coding.csv</a>、<a href="zus_content_calendar.csv">zus_content_calendar.csv</a>、<a href="measurement_framework.csv">measurement_framework.csv</a>：项目结构化复盘数据。</li>
-      </ul>
+      <h2>项目总结</h2>
+      <div class="quote">项目最终沉淀为一套新品账号冷启动方法：先用竞品和用户问题确认内容方向，再用产品、场景、活动、UGC、生活方式五类内容铺开发布，最后通过触达、互动、保存、访问、点击和粉丝增长持续优化下一轮运营。</div>
     </section>
 
-    <div class="footer">ZUS Coffee / ZUS Everywhere new product social operations case · public IG benchmarking + owned execution review.</div>
+    <div class="footer">ZUS Coffee / ZUS Everywhere new product social operations case · Instagram strategy, content matrix, and growth review.</div>
   </main>
 </body>
 </html>

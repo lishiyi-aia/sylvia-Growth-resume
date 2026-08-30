@@ -58,7 +58,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     openLabel: '展开作品',
     hint: '继续下滑',
     awardsLabel: '获奖',
-    visitLabel: '打开完整项目',
+    visitLabel: '查看完整项目',
     detailPlaceholder: '你的作品介绍',
     phImageLabel: '图片 / 视频',
     phButtonLabel: '跳转按钮',

@@ -1013,16 +1013,15 @@ canvas {
 }
 
 .wk-line {
+  border-top: 1px solid rgba(244, 241, 234, 0.09);
   border-bottom: 1px solid rgba(244, 241, 234, 0.09);
 }
-.wk-line:last-child {
-  border-bottom: none;
-}
 
-/* 整行按钮：名靠左、数据靠右；hover 暖色微缩进 */
+/* 整行按钮：标题靠左、明确操作提示靠右；hover 暖色微缩进 */
 .wk-line-btn {
+  position: relative;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: clamp(16px, 4vw, 64px);
   width: 100%;
@@ -1033,12 +1032,36 @@ canvas {
   text-align: left;
   font-family: inherit;
   cursor: pointer;
-  transition: padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease;
+}
+.wk-line-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: #ffd9b3;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .wk-line-btn:hover,
 .wk-line-btn:focus-visible {
   padding-left: 10px;
+  background: rgba(244, 241, 234, 0.025);
   outline: none;
+}
+.wk-line-btn:hover::after,
+.wk-line-btn:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.wk-line-primary {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 .wk-line-name {
@@ -1052,6 +1075,29 @@ canvas {
 .wk-line-btn:hover .wk-line-name,
 .wk-line-btn:focus-visible .wk-line-name {
   color: #ffd9b3;
+}
+
+.wk-line-action {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffd9b3;
+  font-size: clamp(11px, 1.05vw, 13px);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.wk-line-action-arrow {
+  display: inline-block;
+  font-size: 15px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wk-line-btn:hover .wk-line-action-arrow,
+.wk-line-btn:focus-visible .wk-line-action-arrow {
+  transform: translate(3px, -3px);
 }
 
 /* 右侧数据：播放量(暖色) + 标签(弱化)，以 · 连排 */
@@ -1509,7 +1555,12 @@ canvas {
   .wk-line-btn {
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
+    gap: 14px;
+  }
+  .wk-line-action {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 4px;
   }
   .wk-line-meta {
     max-width: 100%;

@@ -8,23 +8,28 @@ import { getWorkDoc } from '../data/workDocs'
 
 const EASE = [0.22, 1, 0.36, 1]
 
-// 极简清单的一行：作品名靠左、数据(播放量/标签)靠右、发丝线分隔；整行可点开全屏详情
-function WorkLine({ item, onOpen }: { item: WorkListItem; onOpen: (item: WorkListItem) => void }) {
-  const hasMeta = item.meta || (item.tags && item.tags.length)
+// 极简清单的一行：作品名与副标题靠左，明确操作提示靠右；整行可点开全屏详情
+function WorkLine({
+  item,
+  onOpen,
+  actionLabel,
+}: {
+  item: WorkListItem
+  onOpen: (item: WorkListItem) => void
+  actionLabel: string
+}) {
   const canOpen = Boolean(item.slug || item.link)
 
   const content = (
     <>
-      <span className="wk-line-name">{item.name}</span>
-      {hasMeta && (
-        <span className="wk-line-meta">
-          {item.meta && <span className="wk-line-num">{item.meta}</span>}
-          {item.tags &&
-            item.tags.map((t, i) => (
-              <span key={i} className="wk-line-tag">
-                {t}
-              </span>
-            ))}
+      <span className="wk-line-primary">
+        <span className="wk-line-name">{item.name}</span>
+        {item.meta && <span className="wk-line-num">{item.meta}</span>}
+      </span>
+      {canOpen && (
+        <span className="wk-line-action">
+          {actionLabel}
+          <span className="wk-line-action-arrow" aria-hidden="true">↗</span>
         </span>
       )}
     </>
@@ -99,7 +104,7 @@ function SectionWorks({
       {section.items && (
         <ul className="wk-list">
           {section.items.map((it, i) => (
-            <WorkLine key={i} item={it} onOpen={onOpen} />
+            <WorkLine key={i} item={it} onOpen={onOpen} actionLabel={data.visitLabel} />
           ))}
         </ul>
       )}
@@ -110,7 +115,7 @@ function SectionWorks({
             <div className="wk-sub-head">{g.heading}</div>
             <ul className="wk-list">
               {g.items.map((it, i) => (
-                <WorkLine key={i} item={{ name: it }} onOpen={onOpen} />
+                <WorkLine key={i} item={{ name: it }} onOpen={onOpen} actionLabel={data.visitLabel} />
               ))}
             </ul>
           </div>

@@ -75,10 +75,10 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             meta: 'Overseas Designer Toy Resale App Growth Strategy',
             slug: 'overseas-toy-growth',
             tags: [
-              '从内容流量假设切入，重构为交易信任驱动的增长问题',
-              '完成用户路径、竞品定位、信任阻碍热力图和渠道角色分析',
-              '规划 TikTok / Reddit / Discord 内容实验与 KOL/KOC 评分模型',
-              '用 AARRR、RICE 与纠纷率护栏形成增长复盘闭环',
+              '个人独立研究：整理19项财报、监管、平台规则与社区公开证据',
+              '完成用户路径、竞品定位、信任阻碍评分与数据到策略映射',
+              '规划 TikTok / Instagram / Reddit / Discord 内容运营与 KOL/KOC 模型',
+              '用 AARRR、RICE 与交易质量护栏设计可执行的测量闭环',
             ],
           },
         ],
@@ -86,18 +86,18 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'project-2',
         no: '02',
-        title: 'AI资讯追踪App运营分析与问题归因面板',
-        tagline: '新品运营｜多源数据整合｜用户路径诊断｜运营决策',
+        title: 'AI资讯追踪App多渠道增长与用户激活',
+        tagline: '小红书增长｜KOL/KOC｜用户调研｜数据复盘',
         items: [
           {
-            name: 'AI资讯追踪 App 运营分析与问题归因面板',
-            meta: 'AI Information Tracking App Operations Dashboard',
+            name: 'AI资讯追踪 App 多渠道增长与用户激活',
+            meta: 'AI Information Product Multi-channel Growth',
             slug: 'ai-news-dashboard',
             tags: [
-              '承接 YouNews 用户路径工具，整合埋点、问卷和日报指标',
-              '定位注册后首次核心体验前的流失节点与功能理解问题',
-              '搭建 Funnel、Activation、Segments、Cross Analysis 诊断框架',
-              '沉淀内容教育、产品入口优化和留存提醒三类动作',
+              '十周累计约58万曝光、15,800次访问与1,438名可归因注册',
+              '筛选金融、科技小博主与低成本KOC，按周错峰验证流量质量',
+              '由渠道行为与88份有效问卷定位阻碍，形成3套拉新活动与3张核心物料',
+              '科技博主发布周新增注册环比提升50%、首次专题创建率相对提升15%',
             ],
           },
         ],
@@ -114,9 +114,9 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             slug: 'zus-everywhere',
             tags: [
               '参与 ZUS 从门店咖啡向 RTD / FMCG 新业务延展的内容冷启动',
-              '完成 50 条 Instagram 内容与 15+ 轮数据复盘迭代',
+              '参与完成 50 条 Instagram 内容与 15+ 轮数据复盘迭代',
               '建立从新品认知、场景兴趣到购买入口的 Content–Commerce 路径',
-              '项目期账号沉淀至 1.1w+ 粉丝；品牌首发结果为 10,000 盒 10 天售罄',
+              '项目期账号粉丝规模达到 1.1w+；品牌首发结果为 10,000 盒 10 天售罄',
             ],
           },
         ],
@@ -146,10 +146,10 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             meta: '海外潮玩二手交易 App 增长策略研究',
             slug: 'overseas-toy-growth',
             tags: [
-              'Built a market, competitor, and community pain-point study from public sources',
-              'Reframed the challenge from traffic acquisition to trust-led conversion',
-              'Designed TikTok, Reddit, Discord, and KOL/KOC growth experiments',
-              'Connected AARRR, RICE prioritization, and dispute-rate guardrails into a review loop',
+              'Independent study built from 19 financial, regulatory, platform, and community evidence records',
+              'Mapped user journeys, competitor positioning, trust-barrier scores, and evidence-led decisions',
+              'Designed TikTok, Instagram, Reddit, Discord, and KOL/KOC operating models',
+              'Connected AARRR, RICE prioritisation, and transaction-quality guardrails',
             ],
           },
         ],
@@ -157,18 +157,18 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'project-2',
         no: '02',
-        title: 'AI Information Tracking App Operations Dashboard',
-        tagline: 'New Product Operations · Multi-source Data · User Journey · Decision Support',
+        title: 'AI Information App Multi-channel Growth & Activation',
+        tagline: 'Xiaohongshu · KOL/KOC · User Research · Growth Review',
         items: [
           {
-            name: 'AI Information Tracking App Operations Dashboard',
-            meta: 'AI资讯追踪App运营分析与问题归因面板',
+            name: 'AI Information App Multi-channel Growth & Activation',
+            meta: 'AI资讯追踪App多渠道增长与用户激活',
             slug: 'ai-news-dashboard',
             tags: [
-              'Turned YouNews user-path data into an operations diagnosis console',
-              'Identified drop-off before first core experience and feature understanding gaps',
-              'Built funnel, activation, segmentation, and cross-analysis modules',
-              'Converted diagnosis into content education, product entry, and retention actions',
+              'Generated about 580K impressions, 15,800 visits, and 1,438 attributable sign-ups in ten weeks',
+              'Screened finance and tech creators plus long-tail KOCs through staggered weekly trials',
+              'Used channel behavior and 88 valid surveys to design three acquisition campaigns and three core assets',
+              'Tech-creator launch week drove 50% WoW registration growth and a 15% relative lift in first-topic creation rate',
             ],
           },
         ],
@@ -185,9 +185,9 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
             slug: 'zus-everywhere',
             tags: [
               'Supported the content launch as ZUS expanded from cafes into RTD and FMCG products',
-              'Delivered 50 Instagram assets and 15+ rounds of performance-led iteration',
+              'Contributed to 50 Instagram assets and 15+ rounds of performance-led iteration',
               'Built a Content–Commerce journey from product discovery to purchase access',
-              'Account reached 11k+ scale; brand launch result: 10,000 boxes sold in 10 days',
+              'Account reached 11k+ during the project; brand launch result: 10,000 boxes sold in 10 days',
             ],
           },
         ],
@@ -199,7 +199,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
 // 板块配图（横向画廊每张卡片左侧的整高封面）。放到 public/works/covers/ 下。
 // 缺图时左栏用大编号渐变占位，放入图片后自动点亮。
 export const SECTION_COVERS: Record<string, string> = {
-  'project-1': `${import.meta.env.BASE_URL}projects/overseas-toy-growth-project-v2/visuals/03_trust_barrier_heatmap.svg`,
+  'project-1': `${import.meta.env.BASE_URL}projects/overseas-toy-growth-project-v2/designer-toy-hero-v2.png`,
   'project-2': `${import.meta.env.BASE_URL}works/covers/sohu-dashboard.png`,
   'project-3': `${import.meta.env.BASE_URL}works/covers/zus-everywhere.jpg`,
 }

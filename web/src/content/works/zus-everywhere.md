@@ -17,7 +17,7 @@ link: projects/zus-everywhere/case_study.html
 
 ## 我的职责
 
-参与新品内容定位、竞品 Instagram 拆解、英文 caption、Story / Reels 脚本、发布节奏与内容复盘；累计完成 50 条内容策划、拍摄、剪辑及英文文案，并进行 15+ 轮内容复盘与迭代。
+参与新品内容定位、竞品 Instagram 拆解、英文 caption、Story / Reels 脚本、发布节奏与内容复盘；参与完成 50 条内容策划、拍摄、剪辑及英文文案，并进行 15+ 轮内容复盘与迭代。
 
 ## 数据驱动路径
 
@@ -31,9 +31,9 @@ link: projects/zus-everywhere/case_study.html
 
 ## 项目结果
 
-- 完成 50 条 Instagram 内容策划、拍摄、剪辑及英文文案
+- 参与完成 50 条 Instagram 内容策划、拍摄、剪辑及英文文案
 - 完成 15+ 轮内容复盘与版本调整
-- 项目期账号沉淀至 1.1w+ 粉丝规模
+- 项目期账号粉丝规模达到 1.1w+
 - COFFIZZ 首发 10,000 盒三罐限量装在 10 天内售罄，为品牌新业务上市结果
 
 ## 项目产出

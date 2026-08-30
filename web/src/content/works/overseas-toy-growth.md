@@ -1,23 +1,21 @@
 ---
 title: 海外潮玩二手交易 App 增长策略研究
-banner: projects/overseas-toy-growth-project-v2/visuals/06_growth_funnel.svg
+banner: projects/overseas-toy-growth-project-v2/designer-toy-hero-v2.png
 year: 2026
-role: 增长运营 / 用户研究 / 竞品分析 / 内容实验设计
+role: 个人独立研究 / 增长运营 / 用户研究 / 竞品分析
 tags: [海外增长, 潮玩交易, Trust-led Growth, KOL/KOC, AARRR]
 link: projects/overseas-toy-growth-project-v2/portfolio_case_study.html
 ---
 
 ## 项目背景
 
-海外潮玩用户已经被 Labubu、designer toys、TikTok 开箱和收藏社区充分种草，但从“想买”到“敢买”之间存在明显断点：用户担心真假鉴定、卖家可信度、付款保护、物流争议和价格透明。这个项目以一个海外 C2C 潮玩二手交易 App 为对象，重新设计从市场判断到增长落地的完整策略。
+这是一个个人独立增长研究项目。项目以海外 C2C 潮玩二手交易 App 为研究对象，通过公开财报、监管信息、平台规则和社区观察，分析用户从“想买”到“敢买”之间的决策阻力，并形成用户分层、竞品定位、信任机制、内容运营与达人筛选方案。
 
 ## 核心问题
 
-最初假设是“需要更多 TikTok 曝光和 KOL 开箱”，但研究后发现问题不只是流量。内容能制造兴趣，却不能自动完成交易信任；横向二手平台有交易能力，但缺少潮玩社群身份和品类鉴定；兴趣社区有真实讨论，却缺少标准化交易保护。
+公开证据显示，内容能够制造兴趣，却不能自动完成交易信任；横向二手平台有交易能力，但缺少潮玩社群身份和品类鉴定；兴趣社区有真实讨论，却缺少标准化交易保护。
 
 所以项目主线调整为：先建立可信交易理由，再放大内容与社群增长。
-
-![Trust Barrier Heatmap](projects/overseas-toy-growth-project-v2/visuals/03_trust_barrier_heatmap.svg)
 
 ## 研究与拆解
 
@@ -26,29 +24,25 @@ link: projects/overseas-toy-growth-project-v2/portfolio_case_study.html
 - 痛点编码：把公开资料和社区讨论整理成真假鉴定、卖家信用、支付保护、价格透明、补货焦虑、收藏展示六类问题。
 - 渠道策略：把 TikTok 作为兴趣放大入口，Reddit / Discord 作为信任教育与社区沉淀入口，KOL/KOC 作为内容验证入口。
 
-![Competitor Positioning](projects/overseas-toy-growth-project-v2/visuals/04_competitor_positioning.svg)
-
 ## 增长方案
 
 **信任前置**：在商品页、发布页和结账页前置真假鉴定 checklist、卖家信用、受保护支付、近期成交价区间，降低用户的交易不确定感。
 
-**内容实验**：用四周内容计划测试“真假辨别”“价格避坑”“开箱展示”“安全交易流程”“补货提醒”五类内容，不只看播放量，而是看点击、注册、收藏、认证完成和交易意向。
+**内容方案**：用四周内容计划组织“真假辨别”“价格避坑”“开箱展示”“安全交易流程”“补货提醒”五类内容，并为每类内容匹配点击、收藏、认证查看和交易意向指标。
 
-**达人/KOC 合作**：建立候选评分模型，用品类相关性、社区信号、互动质量、信任教育适配度和品牌安全做排序，优先测试中腰部真实收藏者，而不是只按粉丝数选人。
+**达人/KOC 筛选**：建立20位公开候选池，用品类相关性、社区信号、互动质量、信任教育适配度和品牌安全做排序，形成知识型、收藏型与资讯型创作者分层。
 
-**复盘机制**：用 AARRR 漏斗配合纠纷率、假货申诉率和低质量邀请率做增长护栏，避免为了拉新牺牲交易质量。
-
-![Growth Funnel](projects/overseas-toy-growth-project-v2/visuals/06_growth_funnel.svg)
+**测量设计**：用 AARRR 指标树配合纠纷率、假货申诉率和低质量邀请率形成增长护栏，说明产品上线后应如何定位获客、信任与交易问题。
 
 ## 项目产出
 
 - 用户画像：内容种草型新用户、交易型藏家、礼物/生活方式用户。
 - 竞品定位：内容电商强度与交易信任强度二维矩阵。
 - 信任模型：用户路径各阶段的信任阻碍热力图。
-- 内容计划：TikTok、Reddit、Discord、Instagram 四周内容实验。
+- 内容计划：TikTok、Reddit、Discord、Instagram 四周内容方案。
 - 达人模型：KOL/KOC 候选池与合作优先级评分。
 - 指标体系：North Star、AARRR、RICE 实验优先级与增长护栏。
 
 ## 项目总结
 
-这个项目最终形成一套 trust-led growth 策略：先判断用户从种草到交易之间的信任阻碍，再把用户路径、内容策略、产品信任机制、达人合作和指标复盘连成完整闭环。
+这个项目最终形成一套 trust-led growth 研究框架：以可追溯证据识别用户从种草到交易之间的信任阻碍，再把用户路径、产品机制、内容运营、达人筛选和指标设计连接成完整闭环。

@@ -26,8 +26,8 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         role: 'New Media Operations Intern',
         points: [
           'Researched new product content and distilled messaging from user preferences, social feedback, and competitor performance.',
-          'Produced 50 Instagram posts, handling planning, shooting, editing, English copywriting, and publishing.',
-          'Delivered 15+ content reviews, shifting strategy toward product features, consumption scenarios, and lifestyle, gaining over 11k followers.',
+          'Contributed to 50 Instagram posts across planning, shooting, editing, English copywriting, and publishing.',
+          'Completed 15+ content review cycles, shifting strategy toward product features, consumption scenarios, and lifestyle; the account reached 11k+ followers during the project period.',
         ],
       },
       {
@@ -56,8 +56,8 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         points: [
           'Researched AI news-tracking products and supported PRD, feature specs, and FAQ development using user feedback and data.',
           'Built AI-assisted operations dashboards to identify drop-off points and product improvement opportunities.',
-          'Created 100+ WeChat, Xiaohongshu, and community posts and optimized channel strategy through A/B testing.',
-          'Helped increase new registrations by 50% and raise special-topic creation rate by 15%.',
+          'Created 100+ WeChat, Xiaohongshu, and community posts, comparing channel and content performance through staggered weekly tests and consistent observation windows.',
+          'During the tech-creator launch week, new registrations rose 50% WoW and first-topic creation rate increased from 41.2% to 47.1%, an approximately 15% relative lift.',
         ],
       },
     ],
@@ -79,8 +79,8 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         role: '新媒体运营实习生',
         points: [
           '参与新品内容调研，结合用户偏好、社媒反馈与竞品表现提炼传播卖点。',
-          '完成50条Instagram内容的选题、拍摄、剪辑、英文文案与发布。',
-          '输出15次以上内容复盘，推动内容转向“产品功能＋消费场景＋生活方式”，账号粉丝增长1.1万以上。',
+          '参与完成50条Instagram内容的选题、拍摄、剪辑、英文文案与发布。',
+          '完成15次以上内容复盘，推动内容转向“产品功能＋消费场景＋生活方式”，项目期账号粉丝规模达到1.1万以上。',
         ],
       },
       {
@@ -109,8 +109,8 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         points: [
           '参与AI资讯追踪产品调研，结合用户反馈与数据协助撰写PRD、功能说明和FAQ。',
           '运用AI辅助搭建运营分析看板，识别用户路径中的流失节点和产品优化问题。',
-          '输出100余篇公众号、小红书及社群内容，并通过A/B Test优化渠道策略。',
-          '推动新增注册用户数提升50%，专题创建率提升15%。',
+          '输出100余篇公众号、小红书及社群内容，采用分周错峰测试和统一观察窗口，对比不同渠道及内容形式的注册与激活表现。',
+          '科技博主发布周新增注册环比提升50%，首次专题创建率由41.2%提升至47.1%，相对提升约15%。',
         ],
       },
     ],
